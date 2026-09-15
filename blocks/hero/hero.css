@@ -1,37 +1,97 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-}
+/* Hero — full-bleed cinematic photographic band (variant C).
+   Section carries .full-bleed (styles.css escapes the max-width cap).
+   Left-anchored white copy over a left->right espresso scrim. */
 
-.hero {
+.hero.block {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: flex;
+  align-items: center;
+  min-height: 92vh;
+  overflow: hidden;
+  color: var(--bg);
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
+/* media layer — over-sized so parallax drift never reveals an edge */
+.hero.block .hero-bg {
   position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  inset: -12% 0;
+  z-index: 0;
+  overflow: hidden;
+  will-change: transform;
 }
 
-.hero img {
-  object-fit: cover;
+.hero.block .hero-bg picture,
+.hero.block .hero-bg img {
+  display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+}
+
+/* left-to-right espresso scrim keeps the left-anchored copy legible */
+.hero.block .hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--scrim-strong) 0%,
+    var(--scrim-mid) 45%,
+    var(--scrim-soft) 100%
+  );
+}
+
+/* copy layer — constrained to the site measure, left-anchored */
+.hero.block .hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero.block .eyebrow {
+  color: var(--on-hero-dim);
+}
+
+.hero.block h1 {
+  max-width: 16ch;
+  color: var(--bg);
+  font-size: clamp(42px, 6.5vw, 80px);
+  line-height: 1.05;
+}
+
+.hero.block .sub {
+  max-width: 30ch;
+  margin-top: 18px;
+  font-family: var(--heading-font-family);
+  font-size: clamp(18px, 2.2vw, 24px);
+  color: var(--on-hero);
+}
+
+.hero.block .trust {
+  margin-top: 14px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--on-hero-trust);
+}
+
+.hero.block .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+/* CTA wrappers are moved in whole; drop their default vertical rhythm */
+.hero.block .hero-actions .button-wrapper {
+  margin: 0;
 }
 
 @media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
+  .hero.block .hero-inner {
+    padding: 0 32px;
   }
 }

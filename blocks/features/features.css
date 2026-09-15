@@ -1,0 +1,86 @@
+/* Features — feature triad (variant C).
+   The band background (--sand) is set by the section's `sand` style on the content
+   page; this block styles the section head + the white feature cards only. */
+
+/* ----- section head (default content above the block) ----- */
+.features-container .default-content-wrapper {
+  max-width: 60ch;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.features-container .default-content-wrapper h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  color: var(--clay);
+}
+
+.features-container .default-content-wrapper h2 + p {
+  margin-top: 14px;
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.features-container .default-content-wrapper .eyebrow,
+.features-container .default-content-wrapper p:first-child {
+  margin-bottom: 14px;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+/* ----- the triad grid (mobile-first: 1-up) ----- */
+.features.block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (width >= 600px) {
+  .features.block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 960px) {
+  .features.block {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----- individual feature card ----- */
+.features.block .feature {
+  padding: 36px 30px;
+  border-radius: var(--r-md);
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.features.block .feature .ico {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 18px;
+  border-radius: var(--r-pill);
+  background: var(--primary-wash);
+  font-size: 24px;
+}
+
+.features.block .feature h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--primary-dk);
+}
+
+.features.block .feature p {
+  margin-top: 10px;
+  font-size: var(--body-font-size-s);
+  color: var(--espresso-3);
+}

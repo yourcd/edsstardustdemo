@@ -1,27 +1,142 @@
-.cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Cards — "Special Packages" 3-up package grid (variant C).
+   The section head (eyebrow / h2 / lede) and the trailing "View all packages"
+   CTA are authored as DEFAULT CONTENT in the same section, so they land in
+   .cards-container .default-content-wrapper. The cards themselves are the block. */
+
+/* ----- section head (default content above the block) ----- */
+.cards-container .default-content-wrapper {
+  max-width: 60ch;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.cards-container .default-content-wrapper h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  color: var(--clay);
+}
+
+.cards-container .default-content-wrapper h2 + p {
+  margin-top: 14px;
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.cards-container .default-content-wrapper .eyebrow,
+.cards-container .default-content-wrapper p:first-child {
+  margin-bottom: 14px;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+/* trailing "View all packages" CTA (default content below the block) */
+.cards-container .default-content-wrapper:last-child {
+  margin: 44px auto 0;
+}
+
+.cards-container .default-content-wrapper .button-wrapper {
+  justify-content: center;
+}
+
+/* ----- the cards grid (mobile-first: 1-up) ----- */
+.cards.block {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 28px;
 }
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+@media (width >= 600px) {
+  .cards.block {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+@media (width >= 960px) {
+  .cards.block {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.cards .cards-card-image {
+/* ----- individual card ----- */
+.cards.block .card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s var(--ease-enter), box-shadow 0.25s var(--ease-enter);
+}
+
+.cards.block .card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cards.block .card-media {
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
   line-height: 0;
 }
 
-.cards > ul > li img {
+.cards.block .card-media img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.5s var(--ease-enter);
+}
+
+.cards.block .card:hover .card-media img {
+  transform: scale(1.06);
+}
+
+.cards.block .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 22px 24px;
+}
+
+.cards.block .card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cards.block .card-meta .card-duration {
+  margin: 0;
+}
+
+.cards.block .card-meta .stars {
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: var(--gold);
+}
+
+.cards.block .card h3 {
+  margin: 0;
+  font-size: var(--heading-font-size-s);
+  color: var(--espresso);
+}
+
+.cards.block .card-body p {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+  color: var(--espresso-3);
+}
+
+/* outline "Explore" CTA pinned to the card foot */
+.cards.block .card-body .button-wrapper {
+  margin: auto 0 0;
 }

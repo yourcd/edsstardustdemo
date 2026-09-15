@@ -1,0 +1,14 @@
+{
+  "_provenance": { "writtenBy": "stardust:direct (uplift)", "variant": "B", "role": "display-typography amplification" },
+  "inherits": "DESIGN.json",
+  "variantIntent": "What if Tenor Sans became the structural voice of the whole page?",
+  "colors": { "background": "#ffffff", "surface": "#f8f8f8", "surfaceWarm": "#e5e3dc", "text": "#2b2b2b", "textStrong": "#3e2e1d", "primary": "#e3876e", "secondary": "#897055", "accent": "#e6ae48", "footer": "#23282d" },
+  "typography": {
+    "headingFamily": "Tenor Sans", "bodyFamily": "Poppins",
+    "scale": { "base": "17px", "ratio": 1.414 },
+    "displayEmphasis": "Tenor Sans promoted to oversized headlines (clamp up to ~88px), section numerals, and nav labels; body measure tightened to ~60ch"
+  },
+  "rounded": "8/16/999",
+  "compositionBet": "Destination content as a labeled editorial rail with large index numerals rather than a uniform card grid; type carries hierarchy.",
+  "motion": null
+}

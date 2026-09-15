@@ -1,0 +1,2 @@
+# DESIGN-B — Tenor Sans amplified
+Inherits DESIGN.md. Static. Bet: promote Tenor Sans from eyebrows into the page's structural voice — oversized editorial headlines (up to ~88px), section index numerals, display-set nav. Body measure tightened. Destination content as a labeled editorial rail with big numerals instead of a uniform card grid. Differentiates from C by axis (typography vs photography-motion).

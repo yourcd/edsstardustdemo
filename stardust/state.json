@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "site": {
+    "originUrl": "https://indiauncharted.com/",
+    "extractedAt": "2026-09-15T11:49:30.209Z",
+    "pageCap": 1,
+    "totalDiscovered": 1,
+    "crawled": 1,
+    "mode": "uplift"
+  },
+  "pages": [
+    {
+      "slug": "index",
+      "url": "https://indiauncharted.com/",
+      "status": "prototyped",
+      "currentStatePath": "stardust/current/pages/index.json",
+      "prototypePath": "stardust/prototypes/index-A-proposed.html",
+      "variants": {
+        "A": "stardust/prototypes/index-A-proposed.html",
+        "B": "stardust/prototypes/index-B-proposed.html",
+        "C": "stardust/prototypes/index-C-proposed.html",
+        "C-cinematic": "stardust/prototypes/index-C-cinematic.html"
+      },
+      "migratedPath": ""
+    }
+  ]
+}

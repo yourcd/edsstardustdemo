@@ -1,0 +1,76 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract (uplift phase 3)",
+    "writtenAt": "2026-09-15T11:50:00.000Z",
+    "againstInput": "https://indiauncharted.com/",
+    "method": "playwright crawl.mjs capture + computed-style aggregation probe",
+    "notes": "Single-page extract (--single). Palette/type/motif aggregated from home computed styles across all elements."
+  },
+  "origins": [
+    { "origin": "https://indiauncharted.com", "role": "primary", "pagesContributing": ["index"] }
+  ],
+  "logo": {
+    "type": "img",
+    "src": "https://indiauncharted.com/wp-content/uploads/2026/02/ind-chr-copy.png",
+    "notes": "Wordmark 'INDIA UNCHARTED' with small emblem; appears in header (dark on light) and footer (light on dark)."
+  },
+  "favicon": "assets/favicon.png",
+  "palette": [
+    { "role": "background", "value": "#ffffff", "rgb": "rgb(255,255,255)", "freq": 124 },
+    { "role": "surface", "value": "#f8f8f8", "rgb": "rgb(248,248,248)", "freq": 4 },
+    { "role": "surface-warm", "value": "#e5e3dc", "rgb": "rgb(229,227,220)", "freq": 4, "notes": "warm sand panel behind 'Find Travel Perfection'" },
+    { "role": "text", "value": "#2b2b2b", "rgb": "rgb(43,43,43)", "freq": 726 },
+    { "role": "text-strong", "value": "#3e2e1d", "rgb": "rgb(62,46,29)", "freq": 94, "notes": "deep espresso brown, used on dark overlays + footer" },
+    { "role": "primary", "value": "#e3876e", "rgb": "rgb(227,135,110)", "freq": 64, "notes": "coral / terracotta — the signature accent, all CTAs and highlights" },
+    { "role": "secondary", "value": "#897055", "rgb": "rgb(137,112,85)", "freq": 27, "notes": "muted clay/taupe — heading color for section eyebrows and H1" },
+    { "role": "accent-gold", "value": "#e6ae48", "rgb": "rgb(230,174,72)", "freq": 1, "notes": "warm gold, star ratings" },
+    { "role": "muted", "value": "#a8a8a8", "rgb": "rgb(168,168,168)", "freq": 32 },
+    { "role": "footer-bg", "value": "#23282d", "rgb": "rgb(35,40,45)", "freq": 2, "notes": "near-black charcoal footer" }
+  ],
+  "type": {
+    "headingFamily": "\"Tenor Sans\", serif-adjacent sans (elegant editorial caps)",
+    "bodyFamily": "Poppins, sans-serif",
+    "tertiaryFamily": "Rubik (minor UI)",
+    "heading": {
+      "h1": { "family": "Tenor Sans", "size": "40px", "weight": 500, "lineHeight": "55px", "color": "#897055" },
+      "h2": { "family": "Tenor Sans", "size": "~28-33px (section titles)", "weight": 600, "color": "#897055" },
+      "h4": { "family": "Tenor Sans", "size": "24px", "weight": 600, "color": "#e3876e" }
+    },
+    "body": { "family": "Poppins", "size": "15px", "color": "#2b2b2b", "lineHeight": "~1.7" },
+    "scaleAudit": { "kind": "ad-hoc", "notes": "Hero headline 40px but section titles compressed; large jump then flat. Weak modular rhythm." }
+  },
+  "motifs": {
+    "borderRadius": { "dominant": "20px", "pillButtons": "50px", "cards": "10px", "notes": "mix of 20px cards, 50px pill CTAs, and small 5-6px chips — inconsistent radius ladder" },
+    "shadows": [
+      "rgba(0,0,0,0.1) 0px 5px 15px 0px (card lift)",
+      "rgb(192,192,192) 0px 0px 8px 1px (diffuse glow)",
+      "rgba(0,0,0,0.07) 0px 0px 5px 2px inset"
+    ],
+    "patterns": ["hero-with-photo", "package-card (image + price + pill CTA)", "destination-tile (image + label overlay)", "testimonial-quote-card", "theme-carousel", "blog-card"],
+    "decorative": ["faint world-map / dotted-route watermark behind sections", "torn/curved section dividers"]
+  },
+  "voice": {
+    "heroHeadline": "Your Journey Begins Here",
+    "heroSub": "Turning Vacations Into Lifelong Stories",
+    "tagline": "UNLIMITED CHOICES | BEST PRICES | HAPPY MEMORIES | HOT DEALS",
+    "heroImage": "https://indiauncharted.com/wp-content/uploads/2026/02/manikarnika-ghat-city-hero.webp",
+    "heroMedium": null,
+    "samples": [
+      "Welcome to India Uncharted, your trusted partner for immersive and personalized journeys across India.",
+      "From the royal palaces and desert landscapes of Rajasthan to the serene backwaters of Kerala, the spiritual energy of Varanasi, and the majestic beauty of the Himalayas, we design journeys that go beyond sightseeing.",
+      "At India Uncharted, we don't just organize trips — we create stories you'll cherish for a lifetime."
+    ],
+    "ctas": ["Explore", "VIEW ALL PACKAGES", "DISCOVER MORE", "VIEW ALL DESTINATIONS", "+91-BOOKING"],
+    "register": "warm, aspirational, hospitality-led; personal ('your journey', 'crafted for you'); India-romantic"
+  },
+  "systemComponents": {
+    "header": "Logo left; nav (Home, About Us, Destinations, Activity, Transfers, Blogs, Contact Us); phone number; coral pill 'BOOKING/ENQUIRY' CTA right.",
+    "footer": "Charcoal; logo + blurb; Get In Touch (address, phone, email); Quick Links; Location; social icons; copyright.",
+    "persistentCta": "Coral pill CTAs throughout; floating enquiry affordance."
+  },
+  "photography": {
+    "quality": "strong, authentic destination photography — Taj Mahal, Jaisalmer forts, Varanasi ghats, wildlife (tiger, leopard), yoga/wellness, desert boats",
+    "treatment": "full-color, warm-toned; often cropped small into cards/tiles rather than shown large",
+    "notes": "This is the brand's strongest asset and is under-used at thumbnail scale."
+  }
+}

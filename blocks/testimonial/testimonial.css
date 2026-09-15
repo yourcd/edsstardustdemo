@@ -1,0 +1,46 @@
+/* Testimonial — centered white quote card (variant C).
+   The section gets .tinted (surface bg) from section metadata; the block
+   styles the card. Generated mark + stars are aria-hidden decoration. */
+
+.testimonial.block .quote-card {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 52px 48px;
+  background: var(--bg);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.testimonial.block .quote-card .mark {
+  font-family: var(--heading-font-family);
+  font-size: 72px;
+  line-height: 0.6;
+  color: var(--primary);
+}
+
+.testimonial.block .quote-card h3 {
+  margin: 10px 0 18px;
+  font-size: var(--heading-font-size-m);
+  color: var(--espresso);
+}
+
+.testimonial.block .quote-card p {
+  margin: 0;
+  font-size: var(--body-font-size-m);
+  color: var(--espresso-3);
+}
+
+.testimonial.block .quote-card .who {
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--clay);
+}
+
+.testimonial.block .quote-card .stars {
+  margin-top: 8px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: var(--gold);
+}

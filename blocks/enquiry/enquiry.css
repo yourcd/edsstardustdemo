@@ -1,0 +1,60 @@
+/* Enquiry — interactive form strip. Espresso band bleeds full-width;
+   inner content is constrained to the site measure via .enquiry-inner.
+   NOT a full-bleed content section — only the background bleeds. */
+
+.enquiry.block {
+  background: var(--espresso);
+  color: var(--bg);
+}
+
+.enquiry.block .enquiry-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 22px 24px;
+}
+
+.enquiry.block b {
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.enquiry.block .enquiry-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.enquiry.block input,
+.enquiry.block select {
+  min-width: 150px;
+  border: none;
+  border-radius: var(--r-sm);
+  padding: 12px 16px;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  color: var(--espresso);
+  background: var(--bg);
+}
+
+.enquiry.block .enquiry-form .button {
+  margin: 0;
+}
+
+.enquiry.block .enquiry-confirm {
+  margin-left: auto;
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  color: var(--on-hero);
+}
+
+@media (width >= 900px) {
+  .enquiry.block .enquiry-inner {
+    padding: 22px 32px;
+  }
+}

@@ -1,20 +1,93 @@
+/* India Uncharted footer — charcoal, 4-column grid */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  margin-top: 0;
+  background: var(--footer);
+  color: var(--on-footer);
+  font-size: 14px;
 }
 
-footer .footer > div {
+footer .footer-inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: var(--maxw);
   margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
-}
-
-footer .footer p {
-  margin: 0;
+  padding: 64px 24px 28px;
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-inner {
+    padding: 64px 32px 28px;
+  }
+}
+
+footer .footer-col { display: flow-root; }
+
+footer .footer p {
+  margin: 0 0 10px;
+  line-height: 1.7;
+}
+
+/* column 1 — brand + blurb */
+footer .footer-col-1 a {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-family: var(--heading-font-family);
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+footer .footer-col-1 p:not(:first-child) {
+  max-width: 34ch;
+  color: var(--on-footer);
+}
+
+footer .footer h4 {
+  margin: 0 0 18px;
+  font-family: var(--body-font-family);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+footer .footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+footer .footer a { color: var(--on-footer); }
+footer .footer a:hover { color: var(--primary); }
+
+/* copyright line inside the last column — distinct column from col-1 above */
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer-col-4 p {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule-on-dark);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (width <= 900px) {
+  footer .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (width <= 600px) {
+  footer .footer-inner {
+    grid-template-columns: 1fr;
   }
 }
