@@ -1,0 +1,117 @@
+/* Destinations — full-bleed seamless photographic mosaic (variant C).
+   Section carries .full-bleed (styles.css escapes the max-width cap).
+   Section head + "View all" CTA are default content (styled below). */
+
+/* section head — .band-head look, centered above the mosaic */
+.destinations-container .default-content-wrapper {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 88px 24px 40px;
+  text-align: center;
+}
+
+.destinations-container .default-content-wrapper h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  color: var(--clay);
+}
+
+.destinations-container .default-content-wrapper h2 + p {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.destinations-container .default-content-wrapper .eyebrow,
+.destinations-container .default-content-wrapper p:first-child {
+  font-family: var(--body-font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  color: var(--clay);
+  margin-bottom: 14px;
+}
+
+/* "View all destinations" CTA sits below the mosaic (default content) */
+.destinations-container .default-content-wrapper:last-child {
+  padding: 44px 24px 0;
+}
+
+/* seamless mosaic grid — gap:0, first tile big */
+.destinations.block .mosaic-full {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 42vh;
+  gap: 0;
+}
+
+.destinations.block .tile {
+  position: relative;
+  overflow: hidden;
+}
+
+/* media layer — over-sized for parallax drift */
+.destinations.block .tile-photo {
+  position: absolute;
+  inset: -12% 0;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.destinations.block .tile-photo picture,
+.destinations.block .tile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-enter);
+}
+
+.destinations.block .tile:hover .tile-photo img {
+  transform: scale(1.06);
+}
+
+/* bottom scrim for label legibility */
+.destinations.block .tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(0deg, var(--scrim-tile), transparent 55%);
+}
+
+/* Tenor Sans white label, bottom-left */
+.destinations.block .tile .label {
+  position: absolute;
+  left: 28px;
+  bottom: 24px;
+  z-index: 2;
+  margin: 0;
+  color: var(--bg);
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: clamp(24px, 2.4vw, 32px);
+  letter-spacing: 0.04em;
+}
+
+@media (width >= 600px) {
+  .destinations.block .mosaic-full {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 38vh;
+  }
+
+  .destinations.block .tile.big {
+    grid-column: span 2;
+  }
+}
+
+@media (width >= 960px) {
+  .destinations.block .mosaic-full {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-auto-rows: 44vh;
+  }
+
+  .destinations.block .tile.big {
+    grid-row: span 2;
+    grid-column: auto;
+  }
+}

@@ -1,0 +1,88 @@
+/* Welcome — full-bleed editorial split band (variant C).
+   Section carries .full-bleed (styles.css escapes the max-width cap).
+   50/50 grid: left full-height photo (coral badge pill), right surface copy panel. */
+
+.welcome.block .welcome-band {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 82vh;
+}
+
+@media (width >= 960px) {
+  .welcome.block .welcome-band {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ----- photo layer ----- */
+.welcome.block .welcome-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 52vh;
+}
+
+.welcome.block .welcome-photo picture,
+.welcome.block .welcome-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* coral badge pill overlay */
+.welcome.block .welcome-photo .badge {
+  position: absolute;
+  bottom: 26px;
+  left: 26px;
+  z-index: 2;
+  margin: 0;
+  padding: 16px 24px;
+  border-radius: var(--r-md);
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xs);
+  color: var(--bg);
+}
+
+/* ----- copy panel ----- */
+.welcome.block .welcome-copy {
+  display: flex;
+  align-items: center;
+  padding: 56px 32px;
+  background: var(--surface);
+}
+
+@media (width >= 960px) {
+  .welcome.block .welcome-copy {
+    padding: 72px 8vw 72px 64px;
+  }
+}
+
+.welcome.block .welcome-copy-inner {
+  max-width: 46ch;
+}
+
+.welcome.block .welcome-copy .eyebrow {
+  margin-bottom: 14px;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+.welcome.block .welcome-copy h2 {
+  font-size: clamp(28px, 3.4vw, 42px);
+  color: var(--clay);
+}
+
+.welcome.block .welcome-copy-inner p {
+  margin-top: 16px;
+  color: var(--espresso-2);
+}
+
+.welcome.block .welcome-copy .button-wrapper {
+  margin-top: 26px;
+}

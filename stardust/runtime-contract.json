@@ -1,0 +1,10 @@
+{
+  "runtime": "vanilla-eds",
+  "blockWrapperClass": "block",
+  "buttonClasses": ".button / .button.primary / .button.secondary / .button.accent, in p.button-wrapper",
+  "buttonization": "formatted-only",
+  "fragmentScriptPolicy": "inert-innerHTML",
+  "emptySectionCollapse": true,
+  "source": "read from scripts/scripts.js decorateButtons() + aem.js decorateBlock (line 550-555): block gains .block + data-block-name, wrapped in div.<name>-wrapper, section gains .<name>-container",
+  "notes": "current adobe/aem-boilerplate main. CSP has strict-dynamic (module import() ok, no wasm-unsafe-eval). Lenis is a plain-JS ESM module — safe via pinned import()."
+}

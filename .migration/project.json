@@ -1,0 +1,9 @@
+{
+  "sites": {
+    "edsstardustdemo": {
+      "previewOrg": "yourcd",
+      "previewSite": "edsstardustdemo",
+      "contentHostUrl": "https://content.da.live/yourcd/edsstardustdemo/"
+    }
+  }
+}

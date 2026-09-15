@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>India Uncharted — Custom India Tours & Curated Journeys</title>
+<link rel="icon" href="../current/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./lenis.min.css">
+<style>
+:root{
+  --bg:#ffffff; --surface:#f8f8f8; --sand:#e5e3dc; --text:#2b2b2b;
+  --espresso:#3e2e1d; --primary:#e3876e; --primary-dk:#d06f55; --clay:#897055;
+  --gold:#e6ae48; --footer:#23282d; --muted:#8d8d8d;
+  /* espresso-derived tonal ramp — text shades on warm neutrals */
+  --espresso-2:#4a4034; --espresso-3:#5a5148;
+  /* photographic scrims (deep-espresso base #231a11, intentional overlay ramp) */
+  --scrim-strong:rgba(35,26,17,.78); --scrim-mid:rgba(35,26,17,.45); --scrim-soft:rgba(35,26,17,.15);
+  --scrim-flat:rgba(35,26,17,.5); --scrim-tile:rgba(35,26,17,.65); --scrim-theme:rgba(35,26,17,.72); --scrim-fade:rgba(35,26,17,.05);
+  /* full-bleed editorial band scrim (deep-espresso base, bottom-anchored) — variant C */
+  --scrim-band:rgba(35,26,17,.55); --scrim-band-soft:rgba(35,26,17,.08);
+  /* warm-cream text tints for copy set on photography (from primary/sand) */
+  --on-hero:#f6ece6; --on-hero-dim:#f0d9cf; --on-hero-trust:#e9d6cd; --on-dark:#f0e2d9;
+  /* surface tints derived from primary + white */
+  --primary-wash:rgba(227,135,110,.14);
+  --on-footer:#c9c9c9;
+  --line-on-dark:rgba(255,255,255,.7); --line-on-dark-soft:rgba(255,255,255,.2);
+  --hover-on-dark:rgba(255,255,255,.12); --rule-on-dark:rgba(255,255,255,.1);
+  --r-sm:8px; --r-md:16px; --r-pill:999px;
+  --shadow:0 8px 24px rgba(62,46,29,.12);
+  --shadow-lg:0 18px 50px rgba(62,46,29,.20);
+  --maxw:1200px;
+  --ff-display:"Tenor Sans",serif; --ff-body:"Poppins",sans-serif;
+  /* editorial motion tokens (register: editorial — reading-paced, restrained) */
+  --ease-enter:cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-enter:900ms; --stagger:140ms;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);color:var(--text);background:var(--bg);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--ff-display);font-weight:400;color:var(--espresso);line-height:1.15}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--ff-body);text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:600;color:var(--clay);margin-bottom:14px}
+.section{padding:88px 0}
+.section-head{text-align:center;max-width:60ch;margin:0 auto 48px}
+.section-head h2{font-size:clamp(30px,4vw,44px);color:var(--clay)}
+.section-head p{margin-top:14px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;font-family:var(--ff-body);font-weight:500;font-size:14px;letter-spacing:.03em;padding:14px 30px;border-radius:var(--r-pill);border:none;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:var(--primary-dk);transform:translateY(-2px)}
+.btn-ghost{background:transparent;border:1.5px solid var(--line-on-dark);color:#fff}
+.btn-ghost:hover{background:var(--hover-on-dark)}
+.btn-outline{background:transparent;border:1.5px solid var(--primary);color:var(--primary-dk)}
+.btn-outline:hover{background:var(--primary);color:#fff}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(62,46,29,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font-family:var(--ff-display);font-size:22px;letter-spacing:.08em;color:var(--espresso);text-transform:uppercase}
+.logo span{color:var(--primary)}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{font-size:14px;font-weight:400;color:var(--text);transition:color .2s;position:relative}
+.nav-links a:hover{color:var(--primary-dk)}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.nav-phone{font-size:14px;font-weight:500;color:var(--espresso)}
+.burger{display:none;background:none;border:none;font-size:24px;color:var(--espresso);cursor:pointer}
+
+/* Hero — full-bleed cinematic photographic band (C) */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:-12% 0;z-index:0;overflow:hidden;will-change:transform}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform-origin:center;will-change:transform}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--scrim-strong) 0%,var(--scrim-mid) 45%,var(--scrim-soft) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 24px;width:100%}
+.hero .eyebrow{color:var(--on-hero-dim)}
+.hero h1{color:#fff;font-size:clamp(42px,6.5vw,80px);line-height:1.05;max-width:16ch}
+.hero .sub{font-size:clamp(18px,2.2vw,24px);font-family:var(--ff-display);margin-top:18px;color:var(--on-hero);max-width:30ch}
+.hero .trust{margin-top:14px;font-size:14px;color:var(--on-hero-trust);letter-spacing:.02em}
+.hero-actions{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap}
+
+/* restrained ken-burns on hero image (editorial: slow, continuous) */
+.hero-bg img{animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.1)}}
+
+/* enquiry strip */
+.enquiry{background:var(--espresso);color:#fff}
+.enquiry-inner{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:22px 0}
+.enquiry b{font-family:var(--ff-display);font-size:20px}
+.enquiry form{display:flex;gap:12px;flex-wrap:wrap;margin-left:auto}
+.enquiry input,.enquiry select{border:none;border-radius:var(--r-sm);padding:12px 16px;font-family:var(--ff-body);font-size:14px;min-width:150px}
+
+/* Package cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{background:#fff;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.card-media{aspect-ratio:3/2;overflow:hidden}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .card-media img{transform:scale(1.06)}
+.card-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.card h3{font-size:21px;color:var(--espresso)}
+.stars{color:var(--gold);font-size:13px;letter-spacing:2px}
+.card .btn{margin-top:auto;align-self:flex-start}
+.center-cta{text-align:center;margin-top:44px}
+
+/* Welcome — full-bleed editorial split band (C) */
+.welcome-band{display:grid;grid-template-columns:1fr 1fr;min-height:82vh}
+.welcome-photo{position:relative;overflow:hidden}
+.welcome-photo img{position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover;will-change:transform}
+.welcome-photo .badge{position:absolute;bottom:26px;left:26px;background:var(--primary);color:#fff;padding:16px 24px;border-radius:var(--r-md);box-shadow:var(--shadow);font-family:var(--ff-display);font-size:18px;z-index:2}
+.welcome-copy{background:var(--surface);display:flex;align-items:center;padding:72px 8vw 72px 64px}
+.welcome-copy-inner{max-width:46ch}
+.welcome-copy h2{font-size:clamp(28px,3.4vw,42px);color:var(--clay)}
+.welcome-copy p{margin-top:16px;color:var(--espresso-2)}
+
+/* Feature triad */
+.features{background:var(--sand)}
+.triad{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.feature{background:#fff;border-radius:var(--r-md);padding:36px 30px;box-shadow:var(--shadow);text-align:center}
+.feature .ico{width:56px;height:56px;border-radius:var(--r-pill);background:var(--primary-wash);display:grid;place-items:center;margin:0 auto 18px;font-size:24px}
+.feature h3{font-size:20px;color:var(--primary-dk)}
+.feature p{margin-top:10px;font-size:15px;color:var(--espresso-3)}
+
+/* Destinations — full-bleed seamless photographic band (C) */
+.band-head{text-align:center;max-width:60ch;margin:0 auto;padding:88px 24px 40px}
+.band-head h2{font-size:clamp(30px,4vw,44px);color:var(--clay)}
+.band-head p{margin-top:14px;color:var(--muted)}
+.mosaic-full{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:44vh;gap:0}
+.tile{position:relative;overflow:hidden}
+.tile-photo{position:absolute;inset:-12% 0;overflow:hidden;will-change:transform}
+.tile-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.tile:hover .tile-photo img{transform:scale(1.06)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--scrim-tile),transparent 55%);z-index:1}
+.tile .label{position:absolute;left:28px;bottom:24px;z-index:2;color:#fff;font-family:var(--ff-display);font-size:clamp(24px,2.4vw,32px);letter-spacing:.04em}
+.tile.big{grid-row:span 2}
+.band-cta{text-align:center;padding:44px 24px 0}
+
+/* Testimonial */
+.testimonial{background:var(--surface)}
+.quote-card{max-width:760px;margin:0 auto;background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow-lg);padding:52px 48px;text-align:center;position:relative}
+.quote-card .mark{font-family:var(--ff-display);font-size:72px;color:var(--primary);line-height:.6}
+.quote-card h3{font-size:26px;color:var(--espresso);margin:10px 0 18px}
+.quote-card p{color:var(--espresso-3);font-size:17px}
+.quote-card .who{margin-top:20px;font-weight:600;color:var(--clay)}
+.quote-card .stars{margin-top:8px;font-size:16px}
+
+/* Theme grid — full-bleed seamless photographic band (C) */
+.themes-full{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:56vh;gap:0}
+.theme{position:relative;overflow:hidden}
+.theme-photo{position:absolute;inset:-12% 0;overflow:hidden;will-change:transform}
+.theme-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.theme:hover .theme-photo img{transform:scale(1.06)}
+.theme::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--scrim-theme),var(--scrim-fade) 60%);z-index:1}
+.theme .label{position:absolute;inset:auto 0 30px 0;z-index:2;text-align:center;color:#fff;font-family:var(--ff-display);font-size:clamp(20px,1.8vw,24px);letter-spacing:.05em;padding:0 16px}
+
+/* CTA band — full-bleed */
+.ctaband{position:relative;min-height:520px;display:flex;align-items:center;color:#fff;text-align:center;overflow:hidden}
+.ctaband-bg{position:absolute;inset:-12% 0;z-index:0;overflow:hidden;will-change:transform}
+.ctaband-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ctaband::after{content:"";position:absolute;inset:0;background:var(--scrim-flat);z-index:1}
+.ctaband .inner{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:0 24px}
+.ctaband h2{color:#fff;font-size:clamp(30px,4.5vw,52px)}
+.ctaband p{margin-top:14px;color:var(--on-dark)}
+.ctaband .btn{margin-top:26px}
+
+/* Blog */
+.blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.post{background:#fff;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s}
+.post:hover{transform:translateY(-5px)}
+.post-media{aspect-ratio:4/3;overflow:hidden}
+.post-media img{width:100%;height:100%;object-fit:cover}
+.post-body{padding:18px 18px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.post h3{font-family:var(--ff-body);font-weight:600;font-size:16px;line-height:1.4;color:var(--espresso)}
+.post .read{margin-top:auto;color:var(--primary-dk);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+
+/* Footer */
+.site-footer{background:var(--footer);color:var(--on-footer);padding:64px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.foot-logo{font-family:var(--ff-display);font-size:22px;letter-spacing:.08em;color:#fff;text-transform:uppercase;margin-bottom:16px}
+.foot-logo span{color:var(--primary)}
+.site-footer h4{color:#fff;font-family:var(--ff-body);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
+.site-footer ul{list-style:none}
+.site-footer li{margin-bottom:10px;font-size:14px}
+.site-footer a:hover{color:var(--primary)}
+.foot-blurb{font-size:14px;line-height:1.7;max-width:34ch}
+.socials{display:flex;gap:12px;margin-top:18px}
+.socials a{width:36px;height:36px;border-radius:var(--r-pill);border:1px solid var(--line-on-dark-soft);display:grid;place-items:center;font-size:14px}
+.socials a:hover{background:var(--primary);border-color:var(--primary);color:#fff}
+.copyright{border-top:1px solid var(--rule-on-dark);margin-top:44px;padding-top:22px;text-align:center;font-size:13px;color:var(--muted)}
+
+/* ===== Editorial motion layer (register: editorial) ===== */
+/* Scroll-linked reveal: reading-paced fade + gentle rise (resolves as the band settles) */
+[data-anim]{opacity:0;transform:translateY(26px);transition:opacity var(--dur-enter) var(--ease-enter),transform var(--dur-enter) var(--ease-enter);will-change:opacity,transform}
+[data-anim].in{opacity:1;transform:none}
+/* Hero copy resolves on load, not on scroll */
+.hero [data-anim]{transform:translateY(20px)}
+
+@media(max-width:960px){
+  .cards,.triad,.blog-grid{grid-template-columns:repeat(2,1fr)}
+  .welcome-band{grid-template-columns:1fr}
+  .welcome-photo{min-height:52vh}
+  .welcome-copy{padding:56px 32px}
+  .mosaic-full{grid-template-columns:1fr 1fr;grid-auto-rows:38vh}
+  .tile.big{grid-row:span 1;grid-column:span 2}
+  .themes-full{grid-template-columns:repeat(2,1fr);grid-auto-rows:44vh}
+  .nav-links{display:none}
+  .burger{display:block}
+  .enquiry form{margin-left:0}
+}
+@media(max-width:600px){
+  .cards,.triad,.blog-grid{grid-template-columns:1fr}
+  .mosaic-full{grid-template-columns:1fr;grid-auto-rows:42vh}
+  .tile.big{grid-column:span 1}
+  .themes-full{grid-template-columns:1fr;grid-auto-rows:44vh}
+  .section{padding:60px 0}
+  .band-head{padding:60px 24px 32px}
+  .hero{min-height:80vh}
+}
+
+/* ===== Reduced-motion neutralization (mandatory) ===== */
+/* Fully static, fully readable: no reveals, no parallax, no ken-burns, no smooth-scroll */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation:none !important;
+    animation-duration:0s !important;
+    animation-timeline:auto !important;
+    transition:none !important;
+  }
+  [data-anim]{opacity:1 !important;transform:none !important}
+  [data-parallax],.hero-bg,.tile-photo,.theme-photo,.ctaband-bg,.welcome-photo img,.hero-bg img{transform:none !important}
+  .hero-bg img{animation:none !important;transform:none !important}
+}
+</style>
+<noscript>
+<style>
+  /* No-JS static end state: reveals and parallax layers resolve to visible/identity */
+  [data-anim]{opacity:1 !important;transform:none !important}
+  [data-parallax]{transform:none !important}
+</style>
+</noscript>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="#">India<span> Uncharted</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#welcome">About Us</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#themes">Activity</a></li>
+      <li><a href="#">Transfers</a></li>
+      <li><a href="#blog">Blogs</a></li>
+      <li><a href="#footer">Contact Us</a></li>
+    </ul></nav>
+    <div class="nav-cta">
+      <span class="nav-phone">+91 80059 67178</span>
+      <a class="btn" href="#enquiry">Enquire</a>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" data-parallax="-0.06"><img src="../current/assets/media/manikarnika-ghat-city-hero.webp" alt="Boats on the ghats of Varanasi at dawn"></div>
+  <div class="hero-inner">
+    <p class="eyebrow" data-anim>Custom journeys across India</p>
+    <h1 data-anim>Your Journey Begins Here</h1>
+    <p class="sub" data-anim>Turning vacations into lifelong stories.</p>
+    <p class="trust" data-anim>Handcrafted itineraries · Local experts · 24/7 support</p>
+    <div class="hero-actions" data-anim>
+      <a class="btn" href="#enquiry">Plan my journey</a>
+      <a class="btn btn-ghost" href="#packages">Explore packages</a>
+    </div>
+  </div>
+</section>
+
+<div class="enquiry" id="enquiry">
+  <div class="wrap enquiry-inner">
+    <b>Start planning</b>
+    <form onsubmit="return false">
+      <input type="text" placeholder="Your name" aria-label="Your name">
+      <input type="email" placeholder="Email" aria-label="Email">
+      <input type="tel" placeholder="Phone" aria-label="Phone">
+      <select aria-label="Interest"><option>Interest</option><option>Rajasthan</option><option>Wellness & Yoga</option><option>Wildlife</option><option>Honeymoon</option></select>
+      <button class="btn" type="submit">Send enquiry</button>
+    </form>
+  </div>
+</div>
+
+<section class="section" id="packages">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-anim>Curated for you</p>
+      <h2 data-anim>Special Packages</h2>
+      <p data-anim>Signature journeys, thoughtfully arranged from the first mile to the last.</p>
+    </div>
+    <div class="cards">
+      <article class="card" data-anim>
+        <div class="card-media"><img src="../current/assets/media/dd.jpg" alt="Leopard in Rajasthan"></div>
+        <div class="card-body">
+          <div class="card-meta"><span>6 Days · 5 Nights</span><span class="stars">★★★★★</span></div>
+          <h3>Rajasthan Wildlife Tour</h3>
+          <p style="font-size:15px;color:var(--espresso-3)">Forts, dunes and leopard country across royal Rajasthan.</p>
+          <a class="btn btn-outline" href="#">Explore</a>
+        </div>
+      </article>
+      <article class="card" data-anim>
+        <div class="card-media"><img src="../current/assets/media/Y.jpg" alt="Yoga at sunrise in Goa"></div>
+        <div class="card-body">
+          <div class="card-meta"><span>7 Days</span><span class="stars">★★★★★</span></div>
+          <h3>Goa Yoga &amp; Wellness Retreat</h3>
+          <p style="font-size:15px;color:var(--espresso-3)">Sunrise practice, ayurveda and slow coastal mornings.</p>
+          <a class="btn btn-outline" href="#">Explore</a>
+        </div>
+      </article>
+      <article class="card" data-anim>
+        <div class="card-media"><img src="../current/assets/media/lk.jpg" alt="Tiger on a wildlife safari"></div>
+        <div class="card-body">
+          <div class="card-meta"><span>8 Days · 7 Nights</span><span class="stars">★★★★★</span></div>
+          <h3>Golden Triangle with Wildlife</h3>
+          <p style="font-size:15px;color:var(--espresso-3)">Delhi, Agra and Jaipur paired with a tiger safari.</p>
+          <a class="btn btn-outline" href="#">Explore</a>
+        </div>
+      </article>
+    </div>
+    <div class="center-cta"><a class="btn" href="#">View all packages</a></div>
+  </div>
+</section>
+
+<section class="welcome-band" id="welcome">
+  <div class="welcome-photo" data-parallax="-0.05">
+    <img src="../current/assets/media/at18-copy-1.png" alt="Traditional Indian architecture and landscape">
+    <span class="badge">Crafted, not templated</span>
+  </div>
+  <div class="welcome-copy">
+    <div class="welcome-copy-inner">
+      <p class="eyebrow" data-anim>Welcome to India Uncharted</p>
+      <h2 data-anim>Personal journeys, told in your own voice</h2>
+      <p data-anim>Your trusted partner for immersive, personalized journeys across India. We curate unforgettable experiences that showcase the country's rich heritage, diverse cultures and timeless traditions.</p>
+      <p data-anim>From the royal palaces and desert landscapes of Rajasthan to the serene backwaters of Kerala, the spiritual energy of Varanasi and the majesty of the Himalayas, we design journeys that go beyond sightseeing.</p>
+      <div style="margin-top:26px" data-anim><a class="btn" href="#">Discover more</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section features">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-anim>Why travel with us</p>
+      <h2 data-anim>Find Travel Perfection</h2>
+      <p data-anim>Every journey across India is thoughtfully designed to match your dreams.</p>
+    </div>
+    <div class="triad">
+      <div class="feature" data-anim><div class="ico">✦</div><h3>Personalized Journeys</h3><p>Tailor-made itineraries crafted to match your travel style, interests and pace.</p></div>
+      <div class="feature" data-anim><div class="ico">✧</div><h3>Seamless Travel Experience</h3><p>Comfortable stays, reliable transport and expert-guided tours across every region.</p></div>
+      <div class="feature" data-anim><div class="ico">❖</div><h3>Authentic &amp; Memorable Moments</h3><p>Hidden gems, cultural treasures and landscapes from the ghats of Varanasi to the peaks.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="destinations">
+  <div class="band-head">
+    <p class="eyebrow" data-anim>Where to go</p>
+    <h2 data-anim>Top Destinations</h2>
+    <p data-anim>We don't just organize trips — we create stories you'll cherish for a lifetime.</p>
+  </div>
+  <div class="mosaic-full">
+    <div class="tile big"><div class="tile-photo" data-parallax="-0.04"><img src="../current/assets/media/1.jpg" alt="Taj Mahal in Agra"></div><span class="label">Agra</span></div>
+    <div class="tile"><div class="tile-photo" data-parallax="-0.04"><img src="../current/assets/media/2.jpg" alt="Jodhpur palace"></div><span class="label">Jodhpur</span></div>
+    <div class="tile"><div class="tile-photo" data-parallax="-0.04"><img src="../current/assets/media/D.jpg" alt="Jaisalmer fort"></div><span class="label">Jaisalmer</span></div>
+    <div class="tile"><div class="tile-photo" data-parallax="-0.04"><img src="../current/assets/media/G.jpg" alt="India Gate, Delhi"></div><span class="label">Delhi</span></div>
+    <div class="tile"><div class="tile-photo" data-parallax="-0.04"><img src="../current/assets/media/D-1.jpg" alt="Desert landscape"></div><span class="label">Rajasthan</span></div>
+  </div>
+  <div class="band-cta"><a class="btn" href="#">View all destinations</a></div>
+</section>
+
+<section class="section testimonial">
+  <div class="wrap">
+    <div class="quote-card" data-anim>
+      <div class="mark">“</div>
+      <h3>A Journey We'll Never Forget</h3>
+      <p>Traveling across India with India Uncharted was an incredible experience. Every detail, from hotels to local guides, was thoughtfully arranged. We felt completely cared for throughout the trip.</p>
+      <div class="who">Priya Sharma</div>
+      <div class="stars">★★★★★</div>
+    </div>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="band-head">
+    <p class="eyebrow" data-anim>By interest</p>
+    <h2 data-anim>Explore Destinations by Theme</h2>
+  </div>
+  <div class="themes-full">
+    <div class="theme"><div class="theme-photo" data-parallax="-0.04"><img src="../current/assets/media/BH.jpg.jpeg" alt="Beach holiday"></div><span class="label">Beach Holidays</span></div>
+    <div class="theme"><div class="theme-photo" data-parallax="-0.04"><img src="../current/assets/media/FH.jpg.jpeg" alt="Family holiday"></div><span class="label">Family Holidays</span></div>
+    <div class="theme"><div class="theme-photo" data-parallax="-0.04"><img src="../current/assets/media/YT.jpg.jpeg" alt="Yoga tour"></div><span class="label">Yoga Tours</span></div>
+    <div class="theme"><div class="theme-photo" data-parallax="-0.04"><img src="../current/assets/media/HH.jpg.jpeg" alt="Honeymoon"></div><span class="label">Honeymoon Holidays</span></div>
+  </div>
+</section>
+
+<section class="ctaband">
+  <div class="ctaband-bg" data-parallax="-0.05"><img src="../current/assets/media/btm-copy.jpg-1-1.jpeg" alt="Boats at Jaisalmer lake at golden hour"></div>
+  <div class="inner">
+    <h2 data-anim>Crafted Journeys, Unforgettable Memories</h2>
+    <p data-anim>Tell us how you like to travel — we'll design the rest.</p>
+    <div data-anim><a class="btn" href="#enquiry">Start planning</a></div>
+  </div>
+</section>
+
+<section class="section" id="blog">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-anim>Stories & guides</p>
+      <h2 data-anim>Our Blog</h2>
+    </div>
+    <div class="blog-grid">
+      <article class="post" data-anim><div class="post-media"><img src="../current/assets/media/ChatGPT-Image-Jun-20-2026-07_26_11-PM-1-960x750.png" alt="Yoga retreat in Goa"></div><div class="post-body"><h3>5 Best Ayurvedic &amp; Wellness Retreat Centres in Goa</h3><span class="read">Read more →</span></div></article>
+      <article class="post" data-anim><div class="post-media"><img src="../current/assets/media/Untitled-design_20260623_235416_0000-960x750.png" alt="Luxury yoga retreat"></div><div class="post-body"><h3>Luxury Yoga Retreats in Goa — A Complete Wellness Guide 2026</h3><span class="read">Read more →</span></div></article>
+      <article class="post" data-anim><div class="post-media"><img src="../current/assets/media/Y.jpg" alt="Goa tropical paradise"></div><div class="post-body"><h3>10 Fascinating Facts About Goa: India's Tropical Paradise</h3><span class="read">Read more →</span></div></article>
+      <article class="post" data-anim><div class="post-media"><img src="../current/assets/media/HSH.jpg.jpeg" alt="Yoga holiday in India"></div><div class="post-body"><h3>Yoga Holiday in India: Find Peace, Wellness &amp; Transformation</h3><span class="read">Read more →</span></div></article>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">India<span> Uncharted</span></div>
+        <p class="foot-blurb">We showcase the true essence of India through meaningful, personalized and seamless travel experiences — connecting travelers with the rich heritage of Rajasthan and beyond.</p>
+        <div class="socials"><a href="#">f</a><a href="#">in</a><a href="#">◎</a><a href="#">✕</a></div>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li>Killi khana, Sodagoran ka Mohalla</li>
+          <li>Jodhpur, Rajasthan 342001</li>
+          <li>+91 80059 67178</li>
+          <li>indiauncharted@gmail.com</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul><li><a href="#welcome">About Us</a></li><li><a href="#destinations">Destinations</a></li><li><a href="#themes">Activity</a></li><li><a href="#blog">Blogs</a></li><li><a href="#footer">Contact Us</a></li></ul>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <ul><li>Rajasthan · India</li><li>Serving travelers worldwide</li></ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 India Uncharted. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="./lenis.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Reduced motion: force final static state, run no motion at all.
+  if (reduce){
+    document.querySelectorAll("[data-anim]").forEach(function(el){ el.classList.add("in"); });
+    return;
+  }
+
+  // ---- Reading-paced reveals (editorial: fade + gentle rise, viewport-center biased) ----
+  var anims = [].slice.call(document.querySelectorAll("[data-anim]"));
+  // per-group stagger, capped well under the 600ms/section budget
+  var groups = new Map();
+  anims.forEach(function(el){
+    var parent = el.parentElement;
+    var idx = groups.get(parent) || 0;
+    var delay = Math.min(idx, 3) * 140; // cap 3*140 = 420ms < 600ms
+    el.style.transitionDelay = delay + "ms";
+    groups.set(parent, idx + 1);
+  });
+  if ("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    anims.forEach(function(el){ io.observe(el); });
+    // hero copy is above the fold — reveal on load
+    document.querySelectorAll(".hero [data-anim]").forEach(function(el){ el.classList.add("in"); });
+  } else {
+    anims.forEach(function(el){ el.classList.add("in"); });
+  }
+
+  // ---- Gentle parallax (editorial cap: <= ~10vh) driven by rAF, re-baselined each frame ----
+  var pxEls = [].slice.call(document.querySelectorAll("[data-parallax]"));
+  var vh = window.innerHeight;
+  var MAX = Math.round(vh * 0.10); // hard editorial clamp ~10vh
+  function clamp(v,min,max){ return Math.max(min, Math.min(max, v)); }
+  function applyParallax(){
+    var mid = vh / 2;
+    for (var i=0;i<pxEls.length;i++){
+      var el = pxEls[i];
+      var r = el.getBoundingClientRect(); // fresh each frame — no stale baseline
+      var center = r.top + r.height/2;
+      var speed = parseFloat(el.getAttribute("data-parallax")) || 0;
+      var t = clamp((center - mid) * speed, -MAX, MAX);
+      el.style.transform = "translate3d(0," + t.toFixed(1) + "px,0)";
+    }
+  }
+
+  // ---- Lenis smooth scroll (editorial: reading-paced) ----
+  var lenis = null;
+  if (typeof Lenis !== "undefined"){
+    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    window.__lenis = lenis;
+    lenis.on("scroll", applyParallax);
+    function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+    // native anchor links must still resolve (no scroll-jack)
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener("click", function(ev){
+        var id = a.getAttribute("href");
+        if (id.length > 1){
+          var target = document.querySelector(id);
+          if (target){ ev.preventDefault(); lenis.scrollTo(target, { offset: -74 }); }
+        }
+      });
+    });
+  } else {
+    // Lenis missing: fall back to native scroll for parallax
+    window.addEventListener("scroll", function(){ requestAnimationFrame(applyParallax); }, { passive: true });
+  }
+
+  window.addEventListener("resize", function(){ vh = window.innerHeight; MAX = Math.round(vh*0.10); applyParallax(); });
+  window.addEventListener("load", applyParallax);
+  applyParallax();
+})();
+</script>
+</body>
+</html>

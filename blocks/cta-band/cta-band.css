@@ -1,0 +1,60 @@
+/* CTA band — full-bleed photographic band, flat espresso scrim,
+   centered white copy + one primary CTA (variant C).
+   Section carries .full-bleed (styles.css escapes the max-width cap). */
+
+.cta-band.block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 520px;
+  overflow: hidden;
+  color: var(--bg);
+  text-align: center;
+}
+
+/* media layer — over-sized for parallax drift */
+.cta-band.block .cta-band-bg {
+  position: absolute;
+  inset: -12% 0;
+  z-index: 0;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.cta-band.block .cta-band-bg picture,
+.cta-band.block .cta-band-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* flat scrim for centered legibility */
+.cta-band.block .cta-band-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--scrim-flat);
+}
+
+.cta-band.block .inner {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cta-band.block h2 {
+  color: var(--bg);
+  font-size: clamp(30px, 4.5vw, 52px);
+}
+
+.cta-band.block .inner p {
+  margin-top: 14px;
+  color: var(--on-dark);
+}
+
+.cta-band.block .inner .button-wrapper {
+  margin: 26px 0 0;
+}

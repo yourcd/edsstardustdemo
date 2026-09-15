@@ -1,91 +1,146 @@
 /*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * India Uncharted — foundation (brand tokens + structural layer)
+ * Structural layer (body gate, header reservation, section scaffold) preserved
+ * verbatim from adobe/aem-boilerplate. Brand tokens lifted from the variant-C prototype.
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* brand palette (from stardust/prototypes/index-C-cinematic.html :root) */
+  --bg: #fff;
+  --surface: #f8f8f8;
+  --sand: #e5e3dc;
+  --text: #2b2b2b;
+  --espresso: #3e2e1d;
+  --espresso-2: #4a4034;
+  --espresso-3: #5a5148;
+  --primary: #e3876e;
+  --primary-dk: #d06f55;
+  --clay: #897055;
+  --gold: #e6ae48;
+  --footer: #23282d;
+  --muted: #8d8d8d;
+
+  /* photographic scrims (deep-espresso base #231a11, intentional overlay ramp) */
+  --scrim-strong: rgb(35 26 17 / 78%);
+  --scrim-mid: rgb(35 26 17 / 45%);
+  --scrim-soft: rgb(35 26 17 / 15%);
+  --scrim-flat: rgb(35 26 17 / 50%);
+  --scrim-tile: rgb(35 26 17 / 65%);
+  --scrim-theme: rgb(35 26 17 / 72%);
+  --scrim-fade: rgb(35 26 17 / 5%);
+  --scrim-band: rgb(35 26 17 / 55%);
+  --scrim-band-soft: rgb(35 26 17 / 8%);
+
+  /* warm-cream text tints for copy set on photography */
+  --on-hero: #f6ece6;
+  --on-hero-dim: #f0d9cf;
+  --on-hero-trust: #e9d6cd;
+  --on-dark: #f0e2d9;
+  --on-footer: #c9c9c9;
+
+  /* surface + line tints */
+  --primary-wash: rgb(227 135 110 / 14%);
+  --line-warm: rgb(62 46 29 / 8%);
+  --line-on-dark: rgb(255 255 255 / 70%);
+  --line-on-dark-soft: rgb(255 255 255 / 20%);
+  --hover-on-dark: rgb(255 255 255 / 12%);
+  --rule-on-dark: rgb(255 255 255 / 10%);
+
+  /* radius, shadow, layout */
+  --r-sm: 8px;
+  --r-md: 16px;
+  --r-pill: 999px;
+  --shadow: 0 8px 24px rgb(62 46 29 / 12%);
+  --shadow-lg: 0 18px 50px rgb(62 46 29 / 20%);
+  --maxw: 1200px;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: poppins, poppins-fallback, sans-serif;
+  --heading-font-family: "tenor sans", tenor-fallback, serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 17px;
+  --body-font-size-s: 15px;
+  --body-font-size-xs: 13px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
+  --heading-font-size-xxl: 80px;
   --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-l: 32px;
+  --heading-font-size-m: 26px;
+  --heading-font-size-s: 21px;
+  --heading-font-size-xs: 18px;
 
-  /* nav height */
-  --nav-height: 64px;
+  /* editorial motion tokens (register: editorial — reading-paced, restrained) */
+  --ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-enter: 900ms;
+  --stagger: 140ms;
+
+  /* nav height — reserved for the late-loading header block (#81) */
+  --nav-height: 74px;
 }
 
-/* fallback fonts */
+/* metric-matched fallback faces (available at first paint; brand faces load via fonts.css).
+   Poppins→Arial and Tenor Sans→Times (serif display).
+   NOTE: size-adjust/ascent/descent were not machine-computed in this environment
+   (no fonttools/network). Values below are conservative approximations — recompute from
+   the woff2 with the fonttools recipe (Step 4 #11) and verify CLS < 0.1 on the DEPLOYED
+   preview before go-live. Tracked in stardust/eds-conversion-log.md. */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
+  font-family: poppins-fallback;
+  src: local("Arial");
+  size-adjust: 112%;
+  ascent-override: 92%;
+  descent-override: 31%;
+  line-gap-override: 9%;
 }
 
 @font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
+  font-family: tenor-fallback;
+  src: local("Times New Roman");
+  size-adjust: 100%;
+  ascent-override: 100%;
+  descent-override: 25%;
+  line-gap-override: 0%;
 }
 
 @media (width >= 900px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
+    --heading-font-size-xxl: 80px;
+    --heading-font-size-xl: 44px;
+    --heading-font-size-l: 32px;
+    --heading-font-size-m: 26px;
+    --heading-font-size-s: 21px;
     --heading-font-size-xs: 18px;
   }
+}
+
+/* box-sizing reset — the boilerplate ships none (#106) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--bg);
+  color: var(--text);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
 body.appear {
   display: block;
 }
 
+/* header reservation — the header block loads late; reserve its height (#81) */
 header {
   height: var(--nav-height);
+  background: var(--bg);
 }
 
 header .header,
@@ -104,12 +159,13 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
+  margin-top: 0.6em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  scroll-margin: 40px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--espresso);
+  scroll-margin: 90px;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -136,8 +192,8 @@ pre {
 
 pre {
   padding: 16px;
-  border-radius: 8px;
-  background-color: var(--light-color);
+  border-radius: var(--r-sm);
+  background-color: var(--surface);
   overflow-x: auto;
   white-space: pre;
 }
@@ -155,18 +211,21 @@ button {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
+  color: var(--primary-dk);
   text-decoration: none;
   overflow-wrap: break-word;
 }
 
 a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
+  color: var(--primary);
 }
 
-/* buttons */
+/* ===== buttons — brand system (formatted-only buttonization) ===== */
 p.button-wrapper {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
   margin: 12px 0;
 }
 
@@ -176,111 +235,97 @@ button.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   max-width: 100%;
   margin: 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
+  border: 1.5px solid transparent;
+  border-radius: var(--r-pill);
+  padding: 14px 30px;
+  font-family: var(--body-font-family);
+  font-size: 14px;
   font-weight: 500;
+  letter-spacing: 0.03em;
   line-height: 1.25;
   text-decoration: none;
   cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  transition: background 0.25s var(--ease-enter), color 0.25s var(--ease-enter), border-color 0.25s var(--ease-enter), transform 0.25s var(--ease-enter);
+}
+
+a.button:any-link:hover,
+button.button:hover {
+  transform: translateY(-2px);
+}
+
+a.button.primary,
+button.button.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+a.button.primary:hover,
+button.button.primary:hover {
+  background: var(--primary-dk);
+  border-color: var(--primary-dk);
+  color: #fff;
+}
+
+/* secondary — outline; dark-surface-aware. Default (on light): coral outline. */
+a.button.secondary,
+button.button.secondary {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary-dk);
+}
+
+a.button.secondary:hover,
+button.button.secondary:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* on dark sections/blocks, secondary is a light ghost outline (#41).
+   Equal-specificity grouped selectors; source order is intentional. */
+/* stylelint-disable no-descending-specificity */
+main .section.dark a.button.secondary,
+main .hero a.button.secondary,
+main .cta-band a.button.secondary {
+  border-color: var(--line-on-dark);
+  color: #fff;
+}
+
+main .section.dark a.button.secondary:hover,
+main .hero a.button.secondary:hover,
+main .cta-band a.button.secondary:hover {
+  background: var(--hover-on-dark);
+  color: #fff;
+}
+/* stylelint-enable no-descending-specificity */
+
+a.button.accent,
+button.button.accent {
+  background: var(--espresso);
+  border-color: var(--espresso);
+  color: #fff;
+}
+
+a.button.accent:hover,
+button.button.accent:hover {
+  background: var(--espresso-2);
+  border-color: var(--espresso-2);
 }
 
 a.button[aria-disabled="true"],
 button.button:disabled {
   cursor: not-allowed;
   pointer-events: none;
+  opacity: 0.6;
 }
 
-a.button.primary,
-button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
-}
-
-a.button.primary:hover,
-a.button.primary:focus-visible,
-button.button.primary:hover,
-button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
-}
-
-a.button.primary[aria-disabled="true"],
-a.button.primary[aria-disabled="true"]:hover,
-a.button.primary[aria-disabled="true"]:focus-visible,
-button.button.primary:disabled,
-button.button.primary:disabled:hover,
-button.button.primary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-a.button.secondary,
-button.button.secondary {
-  border-color: var(--text-color);
-  background-color: transparent;
-  color: var(--text-color);
-}
-
-a.button.secondary:hover,
-a.button.secondary:focus-visible,
-button.button.secondary:hover,
-button.button.secondary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-a.button.secondary[aria-disabled="true"],
-a.button.secondary[aria-disabled="true"]:hover,
-a.button.secondary[aria-disabled="true"]:focus-visible,
-button.button.secondary:disabled,
-button.button.secondary:disabled:hover,
-button.button.secondary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-/* high-impact call-to-action */
-a.button.accent,
-button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
-  color: var(--background-color);
-}
-
-a.button.accent:hover,
-a.button.accent:focus-visible,
-button.button.accent:hover,
-button.button.accent:focus-visible {
-  border-color: var(--link-hover-color);
-  background-color: var(--link-hover-color);
-}
-
-a.button.accent[aria-disabled="true"],
-a.button.accent[aria-disabled="true"]:hover,
-a.button.accent[aria-disabled="true"]:focus-visible,
-button.button.accent:disabled,
-button.button.accent:disabled:hover,
-button.button.accent:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
+/* img reset — EDS adds width/height attrs; height:auto prevents vertical stretch (#36) */
 main img {
+  display: block;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 
@@ -295,13 +340,14 @@ main img {
   width: 100%;
 }
 
-/* sections */
+/* ===== sections ===== */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
+  padding: 64px 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--maxw);
   margin: auto;
   padding: 0 24px;
 }
@@ -316,10 +362,135 @@ main > .section:first-of-type {
   }
 }
 
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
+/* full-bleed escape — blocks that render edge-to-edge (hero, editorial photo bands, cta).
+   Out-specifies the max-width cap so their section wrapper spans the viewport (Step 3). */
+main > .section.full-bleed,
+main > .section.full-bleed > div {
+  max-width: none;
+  padding: 0;
   margin: 0;
-  padding: 40px 0;
+}
+
+main > .section.full-bleed {
+  padding: 0;
+}
+
+/* section-metadata style values for DEFAULT-CONTENT sections (small closed set, D1) */
+main .section.tinted {
+  background: var(--surface);
+}
+
+main .section.sand {
+  background: var(--sand);
+}
+
+main .section.dark {
+  background: var(--espresso);
+  color: var(--on-dark);
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3 {
+  color: #fff;
+}
+
+/* empty styled section must survive :empty hiding without pre-load flash (#121) */
+main .section.dark[data-section-status="loaded"]:empty,
+main .section.tinted[data-section-status="loaded"]:empty {
+  display: block !important;
+}
+
+/* ===== Experience Workspace edit-mode foundation (scoped on .prosemirror-editor;
+   no effect on published pages) ===== */
+
+/* (a) repaint CTAs from their authored marks while editing.
+   Order-dependent edit-mode repaint (base paint → mark variants); keep source order. */
+/* stylelint-disable no-descending-specificity */
+.prosemirror-editor p > :is(strong, em) > a:any-link,
+.prosemirror-editor p > a:any-link:has(> :is(strong, em):only-child) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid transparent;
+  border-radius: var(--r-pill);
+  padding: 14px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.prosemirror-editor p > :is(strong, em) > a:any-link {
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+.prosemirror-editor p > strong > a:any-link,
+.prosemirror-editor p > a:any-link:has(> strong:only-child) {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.prosemirror-editor p > em > a:any-link,
+.prosemirror-editor p > a:any-link:has(> em:only-child) {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary-dk);
+}
+
+/* (b) card-as-link inner anchor reads like card text while editing */
+a .prosemirror-editor a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+/* stylelint-enable no-descending-specificity */
+
+/* ===== editorial motion primitives (shared; runtime in /scripts/motion.js) ===== */
+[data-anim] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity var(--dur-enter) var(--ease-enter), transform var(--dur-enter) var(--ease-enter);
+  will-change: opacity, transform;
+}
+
+[data-anim].in {
+  opacity: 1;
+  transform: none;
+}
+
+/* restrained ken-burns (blocks add .kenburns to a media layer) */
+@keyframes iu-kenburns {
+  from { transform: scale(1.02); }
+  to { transform: scale(1.1); }
+}
+
+.kenburns {
+  animation: iu-kenburns 26s ease-in-out infinite alternate;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* mandatory reduced-motion neutralization — fully static, fully readable */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    animation-duration: 0s !important;
+    transition: none !important;
+  }
+
+  [data-anim] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  [data-parallax],
+  .kenburns {
+    transform: none !important;
+    animation: none !important;
+  }
 }

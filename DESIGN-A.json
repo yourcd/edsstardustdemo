@@ -1,0 +1,16 @@
+{
+  "_provenance": { "writtenBy": "stardust:direct (uplift)", "variant": "A", "role": "faithful + improvements" },
+  "inherits": "DESIGN.json",
+  "variantIntent": "Tomorrow's version of the site you have today. Same IA, obvious fixes applied.",
+  "colors": { "background": "#ffffff", "surface": "#f8f8f8", "surfaceWarm": "#e5e3dc", "text": "#2b2b2b", "textStrong": "#3e2e1d", "primary": "#e3876e", "secondary": "#897055", "accent": "#e6ae48", "footer": "#23282d" },
+  "typography": { "headingFamily": "Tenor Sans", "bodyFamily": "Poppins", "scale": { "base": "17px", "ratio": 1.28 } },
+  "rounded": "8/16/999",
+  "improvements": [
+    "Full-bleed hero, single primary CTA; enquiry demoted below hero",
+    "Photography restored toward editorial scale",
+    "Boutique voice; bargain banner replaced with one trust line",
+    "One radius ladder; stray orange/blue tints retired; coral pill CTAs",
+    "Asymmetric section rhythm"
+  ],
+  "motion": null
+}

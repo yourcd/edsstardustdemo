@@ -1,0 +1,23 @@
+{
+  "_provenance": { "writtenBy": "stardust:direct (uplift)", "againstInput": "https://indiauncharted.com/", "mode": "A" },
+  "colors": {
+    "background": "#ffffff", "surface": "#f8f8f8", "surfaceWarm": "#e5e3dc",
+    "text": "#2b2b2b", "textStrong": "#3e2e1d", "primary": "#e3876e",
+    "secondary": "#897055", "accent": "#e6ae48", "footer": "#23282d"
+  },
+  "typography": {
+    "headingFamily": "Tenor Sans", "bodyFamily": "Poppins",
+    "scale": { "base": "17px", "ratio": 1.28 }
+  },
+  "rounded": "8/16/999",
+  "spacing": { "base": "8px", "sectionPadding": { "desktop": "64px", "mobile": "40px" } },
+  "extensions": {
+    "componentStyle": {
+      "card": "16px radius, shadow 0 8px 24px rgba(62,46,29,.12)",
+      "button": "coral pill, 999px, Tenor Sans or Poppins label",
+      "eyebrow": "clay uppercase micro-label"
+    },
+    "motifs": ["full-bleed-hero", "editorial-image-band", "package-card", "destination-tile", "feature-triad", "testimonial", "theme-grid", "blog-card"],
+    "voice": { "heroHeadline": "Your Journey Begins Here", "heroSub": "Turning Vacations Into Lifelong Stories", "register": "boutique-curated, warm, personal" }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_provenance": { "writtenBy": "stardust:direct (uplift)", "variant": "C", "role": "cinematic — photography + editorial motion" },
+  "inherits": "DESIGN.json",
+  "variantIntent": "What if the destination photography breathed at full editorial scale and moved with you down the page?",
+  "colors": { "background": "#ffffff", "surface": "#f8f8f8", "surfaceWarm": "#e5e3dc", "text": "#2b2b2b", "textStrong": "#3e2e1d", "primary": "#e3876e", "secondary": "#897055", "accent": "#e6ae48", "footer": "#23282d" },
+  "typography": { "headingFamily": "Tenor Sans", "bodyFamily": "Poppins", "scale": { "base": "17px", "ratio": 1.28 } },
+  "rounded": "8/16/999",
+  "compositionBet": "Identical IA to A; the bet is motion, not layout. Full-bleed photographic bands, titles resolve over the image as it settles.",
+  "extensions": {
+    "motion": {
+      "register": "editorial",
+      "registerSource": "auto-picked",
+      "techniques": ["scroll-linked full-bleed image reveal", "gentle parallax on hero + destination photos", "slow title fade/rise as section settles", "ken-burns-restrained on hero"],
+      "intensity": "restrained, reading-paced",
+      "reducedMotion": "all motion neutralized under prefers-reduced-motion: reduce; static full-bleed fallback = C-proposed.html"
+    }
+  }
+}

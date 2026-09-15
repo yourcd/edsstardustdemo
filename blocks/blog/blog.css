@@ -1,0 +1,108 @@
+/* Blog — reconstructive card grid (variant C).
+   Section head ("Our Blog") is default content above the block. */
+
+/* section head — centered .section-head look */
+.blog-container .default-content-wrapper {
+  max-width: 60ch;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.blog-container .default-content-wrapper h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  color: var(--clay);
+}
+
+.blog-container .default-content-wrapper h2 + p {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.blog-container .default-content-wrapper .eyebrow,
+.blog-container .default-content-wrapper p:first-child {
+  font-family: var(--body-font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  color: var(--clay);
+  margin-bottom: 14px;
+}
+
+/* four-up post grid */
+.blog.block .blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.blog.block .post {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s var(--ease-enter);
+}
+
+.blog.block .post:hover {
+  transform: translateY(-5px);
+}
+
+.blog.block .post-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.blog.block .post-media picture,
+.blog.block .post-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog.block .post-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 18px 22px;
+}
+
+/* title — Poppins 600 (body font, not display) */
+.blog.block .post-body h3 {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--espresso);
+}
+
+/* "Read more" — coral uppercase link, NOT a button */
+.blog.block .post-body .read {
+  margin-top: auto;
+  color: var(--primary-dk);
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.blog.block .post-body .read:hover {
+  color: var(--primary);
+}
+
+@media (width >= 600px) {
+  .blog.block .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 960px) {
+  .blog.block .blog-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

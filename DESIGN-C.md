@@ -1,0 +1,2 @@
+# DESIGN-C — Photography + editorial motion (cinematic)
+Inherits DESIGN.md. Cinematic, register: editorial. Bet is MOTION, not layout — IA identical to A. Full-bleed destination photography with slow scroll-linked reveal, gentle parallax, restrained ken-burns on hero, titles that resolve over the image as it settles. All motion neutralized under prefers-reduced-motion (static fallback = index-C-proposed.html). Not "B but bigger" — the third dimension is time/motion over the brand's own photography.

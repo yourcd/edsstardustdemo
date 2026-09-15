@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand Review — India Uncharted</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --surface:#f8f8f8; --sand:#e5e3dc; --text:#2b2b2b;
+    --espresso:#3e2e1d; --primary:#e3876e; --clay:#897055; --gold:#e6ae48;
+    --muted:#a8a8a8; --footer:#23282d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:Poppins,sans-serif;font-size:15px;line-height:1.7}
+  header{background:var(--sand);padding:56px 32px;border-bottom:4px solid var(--primary)}
+  h1,h2,h3{font-family:"Tenor Sans",serif;color:var(--clay);font-weight:500}
+  header h1{font-size:44px;margin:0 0 8px;color:var(--espresso)}
+  header p{margin:0;color:var(--espresso);max-width:70ch}
+  main{max-width:1000px;margin:0 auto;padding:40px 32px 80px}
+  section{margin:0 0 48px}
+  h2{font-size:26px;border-bottom:1px solid var(--sand);padding-bottom:8px}
+  .swatches{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px}
+  .sw{border-radius:10px;overflow:hidden;width:150px;border:1px solid var(--sand)}
+  .sw .chip{height:64px}
+  .sw .lbl{padding:8px 10px;font-size:12px;background:#fff}
+  .sw .lbl b{display:block;color:var(--espresso)}
+  .type-row{margin:10px 0;padding:12px 0;border-bottom:1px dashed var(--sand)}
+  .cite{color:var(--muted);font-size:12px}
+  .tension{background:var(--surface);border:1px solid var(--sand);border-radius:10px;padding:16px 20px;margin:14px 0}
+  .tension h3{margin:0 0 6px;font-size:18px;color:var(--espresso)}
+  .tag{display:inline-block;background:var(--primary);color:#fff;font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:2px 10px;border-radius:50px;margin-right:8px}
+  ul{margin:8px 0}
+  .coverage{background:var(--espresso);color:#fff;border-radius:10px;padding:16px 20px;font-size:14px}
+  .coverage b{color:var(--gold)}
+  .pill{display:inline-block;background:var(--primary);color:#fff;border-radius:50px;padding:8px 22px;font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+</style>
+</head>
+<body>
+<header>
+  <h1>India Uncharted — Brand Review</h1>
+  <p>Descriptive snapshot of the current homepage, captured for redesign. Rendered in the site's own captured palette and type (Tenor Sans / Poppins). Source: <span class="cite">stardust/current/_brand-extraction.json</span></p>
+</header>
+<main>
+  <div class="coverage">
+    Coverage: single-page extract (homepage). Palette, typography, motifs, voice, and system components captured. <b>1 / 1 page</b> rendered live via Playwright (httpStatus 200, waitMs 2500).
+  </div>
+
+  <section>
+    <h2>Palette</h2>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#e3876e"></div><div class="lbl"><b>Primary / coral</b>#e3876e</div></div>
+      <div class="sw"><div class="chip" style="background:#897055"></div><div class="lbl"><b>Secondary / clay</b>#897055</div></div>
+      <div class="sw"><div class="chip" style="background:#3e2e1d"></div><div class="lbl"><b>Espresso</b>#3e2e1d</div></div>
+      <div class="sw"><div class="chip" style="background:#e6ae48"></div><div class="lbl"><b>Gold</b>#e6ae48</div></div>
+      <div class="sw"><div class="chip" style="background:#e5e3dc"></div><div class="lbl"><b>Sand</b>#e5e3dc</div></div>
+      <div class="sw"><div class="chip" style="background:#f8f8f8"></div><div class="lbl"><b>Surface</b>#f8f8f8</div></div>
+      <div class="sw"><div class="chip" style="background:#23282d"></div><div class="lbl"><b>Footer</b>#23282d</div></div>
+      <div class="sw"><div class="chip" style="background:#2b2b2b"></div><div class="lbl"><b>Text</b>#2b2b2b</div></div>
+    </div>
+    <p class="cite">_brand-extraction.json § palette — frequency-sorted computed colors across all elements.</p>
+  </section>
+
+  <section>
+    <h2>Typography</h2>
+    <div class="type-row"><span style="font-family:'Tenor Sans';font-size:40px;color:var(--clay)">Your Journey Begins Here</span><br><span class="cite">Tenor Sans · H1 40px/55px · weight 500 · clay #897055</span></div>
+    <div class="type-row"><span style="font-family:'Tenor Sans';font-size:24px;color:var(--primary)">Explore Destinations By Theme</span><br><span class="cite">Tenor Sans · section title · coral #e3876e</span></div>
+    <div class="type-row"><span style="font-family:Poppins;font-size:15px">Welcome to India Uncharted, your trusted partner for immersive and personalized journeys across India.</span><br><span class="cite">Poppins · body 15px/1.7</span></div>
+    <p class="cite">_brand-extraction.json § type — scaleAudit: ad-hoc (weak modular rhythm).</p>
+  </section>
+
+  <section>
+    <h2>Voice</h2>
+    <p><b>Hero:</b> "Your Journey Begins Here" — <i>Turning Vacations Into Lifelong Stories</i></p>
+    <p><b>Register:</b> warm, aspirational, hospitality-led, personal. "We don't just organize trips — we create stories you'll cherish for a lifetime."</p>
+    <p><b>CTAs:</b> Explore · View All Packages · Discover More · Booking</p>
+  </section>
+
+  <section>
+    <h2>System components</h2>
+    <ul>
+      <li><b>Header:</b> logo · nav (Home / About / Destinations / Activity / Transfers / Blogs / Contact) · phone · coral booking pill.</li>
+      <li><b>Footer:</b> charcoal; logo + blurb; Get In Touch; Quick Links; Location; social; copyright.</li>
+      <li><b>Recurring blocks:</b> package card, destination tile, feature triad, testimonial card, theme carousel, blog card.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tensions surfaced</h2>
+
+    <div class="tension">
+      <h3><span class="tag">dated-pattern</span>Template-era hero + inline lead form</h3>
+      Centered hero over a single photo with a boxed multi-field capture form reads as a 2018–2019 WordPress travel template. The layout, double-CTA density, and form-in-hero pattern date an otherwise premium brand.
+    </div>
+
+    <div class="tension">
+      <h3><span class="tag">missed-opportunity</span>Excellent photography shown at thumbnail scale</h3>
+      The captured imagery (Taj Mahal, Jaisalmer, Varanasi ghats, wildlife, desert boats) is genuinely strong, but the layout crops it into small cards and tiles. The brand's single biggest asset is never allowed to fill the frame.
+    </div>
+
+    <div class="tension">
+      <h3><span class="tag">ia-clutter</span>Voice split between boutique and bargain</h3>
+      An elegant Tenor Sans / hospitality voice competes with a "UNLIMITED CHOICES | BEST PRICES | HOT DEALS" banner. The two registers pull the brand in opposite directions in the first viewport.
+    </div>
+
+    <div class="tension">
+      <h3><span class="tag">contrast-or-density</span>Inconsistent radius &amp; CTA ladder</h3>
+      Radii range across 5px, 6px, 10px, 20px, and 50px pills with no clear ladder; a stray pure-orange (#ff6600) and blue shadow tint leak in from theme defaults, muddying the warm-earth system.
+    </div>
+
+  </section>
+</main>
+</body>
+</html>
