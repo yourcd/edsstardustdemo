@@ -1,0 +1,117 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust site-catalog (template grouping)",
+    "againstInput": "https://indiauncharted.com/",
+    "method": "sitemap inventory + structural probes (h1/h2 outline, form/table/img counts) on representative pages per cluster",
+    "scope": "the 83 confident-migrate pages (coreNav + destinationHubs + itineraryDetail + blogPosts); 41 taxonomy pages flagged review, 5 junk excluded"
+  },
+  "templates": [
+    {
+      "id": "home",
+      "name": "Homepage",
+      "count": 1,
+      "status": "built (variant C)",
+      "representative": "/",
+      "structure": "hero, enquiry, packages (cards), welcome, features, destinations mosaic, testimonial, themes, cta-band, blog grid",
+      "blocksReused": ["hero", "enquiry", "cards", "welcome", "features", "destinations", "testimonial", "themes", "cta-band", "blog"],
+      "newBlocksNeeded": [],
+      "members": ["/"]
+    },
+    {
+      "id": "destination-hub",
+      "name": "Destination hub (*-tour-packages)",
+      "count": 21,
+      "status": "template",
+      "representative": "/goa-tour-packages",
+      "structure": "hero (destination) · 'Why Visit <Dest>?' prose intro · 'Our Popular Tour Packages' card grid (links to itinerary-detail pages) · enquiry form · related destinations",
+      "signals": { "h1": "<Destination> Tour Packages", "h2": ["Why Visit …?", "Our Popular Tour Packages"], "form": 1, "imgs": "4-8" },
+      "blocksReused": ["hero", "cards", "enquiry", "cta-band"],
+      "newBlocksNeeded": ["prose-intro (heading + body + supporting image; likely default content, not a block)"],
+      "members": [
+        "/agra-tour-packages", "/amritsar-tour-packages", "/bharatpur-tour-packages", "/bikaner-tour-packages",
+        "/delhi-tour-packages", "/goa-tour-packages", "/gulmarg-tour-packages", "/haridwar-tour-packages",
+        "/himachal-pradesh-tour-packages", "/jaisalmer-tour-packages", "/jawai-tour-packages", "/jodhpur-tour-packages",
+        "/kashmir-tour-packages", "/khajuraho-tour-packages", "/leh-tour-packages", "/manali-tour-packages",
+        "/pushkar-tour-packages", "/ranthambore-tour-packages", "/rishikesh-tour-packages", "/udaipur-tour-packages",
+        "/varanasi-tour-packages"
+      ]
+    },
+    {
+      "id": "tour-detail",
+      "name": "Tour / experience detail",
+      "count": 47,
+      "status": "template",
+      "representative": "/rajasthan-wildlife-tour-package-6-days-5-nights",
+      "structure": "hero (tour title + duration) · Tour Overview (prose) · Tour Itinerary (day-by-day OR numbered stops — accordion/list) · Package Inclusions · Package Exclusions · enquiry/booking form · related tours",
+      "variants": [
+        { "id": "multi-day", "count": 26, "note": "N-days/N-nights itineraries with day-by-day breakdown (h3 per day)" },
+        { "id": "experience", "count": 21, "note": "half-day / single experiences with numbered stops (walking/food/cycle/desert/sightseeing tours, TTC courses)" }
+      ],
+      "signals": { "h1": "<Tour name> (N Days / N Nights)", "h2": ["Tour Overview", "Tour Itinerary", "Package Inclusions", "Package Exclusions"], "h3": "per-day / per-stop", "form": 1 },
+      "blocksReused": ["hero", "enquiry", "cta-band"],
+      "newBlocksNeeded": ["itinerary (accordion/day-list block)", "inclusions (two-column check/cross list — likely 'columns' or a new 'spec-list' block)", "tour-meta (duration/price/rating strip — optional)"],
+      "membersNote": "26 multi-day + 21 experience = 47; full list in site-inventory.json § itineraryDetail"
+    },
+    {
+      "id": "blog-post",
+      "name": "Blog article",
+      "count": 10,
+      "status": "template",
+      "representative": "/best-ayurvedic-wellness-retreat-goa",
+      "structure": "article hero (title + hero image) · long-form body (h2/h3 sections, prose, images, lists) · related posts · enquiry/newsletter",
+      "signals": { "h2": "4-6 content sections", "h3": "sub-points", "imgs": "6+", "form": "1-2" },
+      "blocksReused": ["hero", "cta-band", "blog"],
+      "newBlocksNeeded": ["article-body (default content: headings + prose + inline images — mostly native, no block)"],
+      "members": [
+        "/10-fascinating-facts-about-goa-indias-tropical-paradise", "/200-hour-yoga-teacher-training-in-goa-guide",
+        "/best-ayurvedic-wellness-retreat-goa", "/best-time-to-visit-goa-for-yoga-retreat",
+        "/best-yoga-retreats-in-goa-2026", "/luxury-yoga-retreats-goa",
+        "/the-ultimate-guide-to-golden-triangle-india-tours-explore-the-best-of-india-in-style",
+        "/top-5-opulent-hotels-in-jodhpur-for-a-regal-stay", "/yoga-holiday-in-goa", "/yoga-holiday-india-goa"
+      ]
+    },
+    {
+      "id": "content-simple",
+      "name": "Simple content page",
+      "count": 2,
+      "status": "template",
+      "representative": "/about-us",
+      "structure": "hero · prose body (mission/story) · feature or values strip · enquiry",
+      "signals": { "h2": "0-2", "form": 1 },
+      "blocksReused": ["hero", "features", "cta-band", "enquiry"],
+      "newBlocksNeeded": [],
+      "members": ["/about-us", "/transfers"]
+    },
+    {
+      "id": "listing",
+      "name": "Listing / index page",
+      "count": 2,
+      "status": "template",
+      "representative": "/destinations",
+      "structure": "hero · large filterable grid of destination/blog tiles (23+ imgs) · enquiry",
+      "signals": { "imgs": "20+", "h2": 0 },
+      "blocksReused": ["hero", "destinations", "blog", "cards"],
+      "newBlocksNeeded": ["listing-grid (reuse destinations/blog card grid at scale)"],
+      "members": ["/destinations", "/blogs"]
+    },
+    {
+      "id": "contact",
+      "name": "Contact page",
+      "count": 1,
+      "status": "template",
+      "representative": "/contact-us",
+      "structure": "hero · 'Get In Touch' contact facts · 'Enquire Now' form · map/location",
+      "signals": { "h2": ["Get In Touch", "Enquire Now"], "form": 2 },
+      "blocksReused": ["hero", "enquiry"],
+      "newBlocksNeeded": ["contact-details (address/phone/email panel — likely default content)", "map (embed, optional)"],
+      "members": ["/contact-us"]
+    }
+  ],
+  "summary": {
+    "templates": 7,
+    "pagesCovered": 84,
+    "note": "home(1) + destination-hub(21) + tour-detail(47) + blog-post(10) + content-simple(2) + listing(2) + contact(1) = 84. '/activity' listing folds into listing template; counts reconcile to the 83 confident-migrate set + home.",
+    "buildLeverage": "7 templates cover 84 pages. Build 1 archetype per template (6 new, home already done), verify, then apply each template across its members — instead of 83 bespoke builds.",
+    "newBlocksAcrossAllTemplates": ["itinerary", "inclusions/spec-list", "prose-intro (or default content)", "contact-details", "map (optional)"]
+  }
+}

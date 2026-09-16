@@ -1,0 +1,94 @@
+/* Itinerary — day-by-day accordion (variant C).
+   Each authored row becomes a .itin-day card with a clickable .itin-head
+   (holding the MOVED h3 + a generated chevron) and an expandable .itin-body.
+   The height animation uses a grid-template-rows 0fr -> 1fr transition;
+   prefers-reduced-motion collapses this to an instant show/hide. */
+
+.itinerary.block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.itinerary.block .itin-day {
+  position: relative;
+  border-left: 3px solid var(--primary);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.itinerary.block .itin-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+}
+
+.itinerary.block .itin-head:focus-visible {
+  outline: 2px solid var(--primary-dk);
+  outline-offset: -2px;
+}
+
+.itinerary.block .itin-head h3 {
+  margin: 0;
+  font-size: var(--heading-font-size-s);
+  color: var(--espresso);
+}
+
+.itinerary.block .itin-chevron {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid var(--clay);
+  border-bottom: 2px solid var(--clay);
+  transform: rotate(45deg);
+  transition: transform 0.3s var(--ease-enter);
+}
+
+.itinerary.block .itin-day.open .itin-chevron {
+  transform: rotate(-135deg);
+}
+
+.itinerary.block .itin-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s var(--ease-enter);
+}
+
+.itinerary.block .itin-day.open .itin-body {
+  grid-template-rows: 1fr;
+}
+
+.itinerary.block .itin-body-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.itinerary.block .itin-body :is(p, ul, ol) {
+  margin: 0 24px 16px;
+  color: var(--espresso-3);
+  font-size: var(--body-font-size-s);
+}
+
+.itinerary.block .itin-body :is(p, ul, ol):first-child {
+  margin-top: 4px;
+}
+
+.itinerary.block .itin-body ul,
+.itinerary.block .itin-body ol {
+  padding-left: 20px;
+}
+
+.itinerary.block .itin-body li {
+  margin-bottom: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .itinerary.block .itin-body {
+    transition: none;
+  }
+}

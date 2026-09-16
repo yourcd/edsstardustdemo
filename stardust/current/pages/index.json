@@ -1,15 +1,15 @@
 {
   "_provenance": {
     "renderedBy": "playwright",
-    "fetchedAt": "2026-09-15T11:49:30.209Z",
-    "waitMode": "medium",
-    "waitMs": 2500,
+    "fetchedAt": "2026-09-16T12:01:56.755Z",
+    "waitMode": "fast",
+    "waitMs": 1200,
     "httpStatus": 200
   },
   "slug": "index",
   "url": "https://indiauncharted.com/",
   "renderedBy": "playwright",
-  "fetchedAt": "2026-09-15T11:49:30.209Z",
+  "fetchedAt": "2026-09-16T12:01:56.755Z",
   "finalUrl": "https://indiauncharted.com/",
   "title": "India Tour Packages & Custom Holidays | India Uncharted",
   "description": "Discover India with India Uncharted. Customized tour packages, Rajasthan holidays, motorcycle adventures, family vacations, honeymoon trips, and authentic travel experiences across India.",
