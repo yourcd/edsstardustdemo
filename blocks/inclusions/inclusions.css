@@ -1,0 +1,92 @@
+/* Inclusions — two-column "what's included / what's not" (variant C).
+   The section title is authored as DEFAULT CONTENT above the block
+   (.inclusions-container .default-content-wrapper). The block renders two
+   cards on --surface; markers are generated ::before glyphs (aria-hidden by
+   nature): ✓ tinted --clay (Included), ✕ tinted --muted (Not included). */
+
+/* ----- section head (default content above the block) ----- */
+.inclusions-container .default-content-wrapper {
+  max-width: 60ch;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.inclusions-container .default-content-wrapper h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  color: var(--clay);
+}
+
+.inclusions-container .default-content-wrapper h2 + p {
+  margin-top: 14px;
+  font-size: var(--body-font-size-m);
+  color: var(--muted);
+}
+
+/* ----- two-column grid (mobile-first: stacked) ----- */
+.inclusions.block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 700px) {
+  .inclusions.block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----- column card ----- */
+.inclusions.block .incl-col {
+  padding: 28px 28px 32px;
+  border-radius: var(--r-md);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.inclusions.block .incl-col-title {
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-warm);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xs);
+  color: var(--espresso);
+}
+
+.inclusions.block .incl-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inclusions.block .incl-col li {
+  position: relative;
+  margin: 0;
+  padding: 8px 0 8px 34px;
+  font-size: var(--body-font-size-s);
+  color: var(--espresso-3);
+}
+
+.inclusions.block .incl-col li::before {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+
+.inclusions.block .incl-yes li::before {
+  content: "\2713";
+  background: var(--primary-wash);
+  color: var(--clay);
+}
+
+.inclusions.block .incl-no li::before {
+  content: "\2715";
+  background: var(--sand);
+  color: var(--muted);
+}

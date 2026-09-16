@@ -1,0 +1,185 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust url-discovery (full crawl)",
+    "againstInput": "https://indiauncharted.com/",
+    "source": "sitemap_index.xml (Yoast)"
+  },
+  "totals": {
+    "discovered": 131
+  },
+  "buckets": {
+    "coreNav": {
+      "purpose": "primary navigation pages",
+      "migrate": true,
+      "urls": [
+        "/",
+        "/about-us",
+        "/destinations",
+        "/activity",
+        "/transfers",
+        "/blogs",
+        "/contact-us"
+      ]
+    },
+    "destinationHubs": {
+      "purpose": "per-destination tour-package landing pages (*-tour-packages)",
+      "migrate": true,
+      "urls": [
+        "/agra-tour-packages",
+        "/delhi-tour-packages",
+        "/amritsar-tour-packages",
+        "/bharatpur-tour-packages",
+        "/bikaner-tour-packages",
+        "/gulmarg-tour-packages",
+        "/haridwar-tour-packages",
+        "/himachal-pradesh-tour-packages",
+        "/jaisalmer-tour-packages",
+        "/jawai-tour-packages",
+        "/jodhpur-tour-packages",
+        "/kashmir-tour-packages",
+        "/khajuraho-tour-packages",
+        "/leh-tour-packages",
+        "/manali-tour-packages",
+        "/pushkar-tour-packages",
+        "/rishikesh-tour-packages",
+        "/ranthambore-tour-packages",
+        "/udaipur-tour-packages",
+        "/varanasi-tour-packages",
+        "/goa-tour-packages"
+      ]
+    },
+    "itineraryDetail": {
+      "purpose": "individual tour/itinerary & experience detail pages",
+      "migrate": true,
+      "urls": [
+        "/educational-group-package-rajasthan-7-days-6-nights",
+        "/200-hour-yoga-teacher-training-course-ttc-in-rishikesh",
+        "/300-hour-yoga-teacher-training-course-ttc-in-rishikesh",
+        "/goa-yoga-retreat-package-3-days-2-nights",
+        "/golden-triangle-tour-with-khajuraho-varanasi-10-days-9-nights",
+        "/golden-triangle-wildlife-tour-8-days-7-nights",
+        "/himachal-pradesh-adventure-tour-with-paragliding-course-8-days-7-nights",
+        "/incredible-india-group-tour-12-days-11-nights",
+        "/jaisalmer-jodhpur-student-group-tour-package-5-days-4-nights",
+        "/kashmir-honeymoon-tour-package-6-days-5-nights",
+        "/kashmir-honeymoon-tour-package-7-days-6-nights",
+        "/kashmir-nature-relaxation-family-tour-8-days-7-nights",
+        "/kashmir-paradise-tour-package-5-days-4-nights",
+        "/long-term-paragliding-certification-course-in-himachal-pradesh",
+        "/luxury-motorcycle-expedition-india-14-days-13-nights",
+        "/rajasthan-motorcycle-tour-12-days-11-nights",
+        "/rajasthan-bird-photography-tour-package-7-days-6-nights",
+        "/rajasthan-wildlife-tour-package-6-days-5-nights",
+        "/rishikesh-yoga-spiritual-retreat-3-days-2-nights",
+        "/rishikesh-yoga-teacher-training-tour-28-days-27-nights",
+        "/royal-enfield-adventure-tour-ultimate-india-motorcycle-expedition-12-days-11-nights",
+        "/spiritual-india-tour-package-12-days-11-nights",
+        "/udaipur-romantic-honeymoon-package-4-days-3-nights",
+        "/ultimate-india-experience-golden-triangle-rajasthan-taj-mahal-varanasi",
+        "/pushkar-walking-tour-spiritual-cultural-heritage-experience",
+        "/walking-tour",
+        "/sightseeing-tour",
+        "/cycle-tour",
+        "/food-walking-tour",
+        "/desert-evening-tour",
+        "/udaipur-food-walking-tour-taste-the-flavors-of-the-city-of-lakes",
+        "/2-nights-3-days-golden-city-jaisalmer-tour-package",
+        "/delhi-heritage-walking-tour-explore-the-soul-of-old-delhi",
+        "/udaipur-heritage-walking-tour-explore-the-city-of-lakes",
+        "/agra-walking-tour-heritage-markets-mughal-culture-experience",
+        "/jaipur-food-walking-tour-taste-the-flavors-of-the-pink-city",
+        "/jaisalmer-desert-evening-tour-camel-safari-folk-dance-dinner-return",
+        "/jaisalmer-walking-tour-explore-the-golden-city-on-foot",
+        "/highlights-of-jodhpur-guided-full-day-city-sightseeing-tour",
+        "/highlights-of-jaisalmer-guided-full-day-city-sightseeing-tour",
+        "/jaipur-cycle-tour-morning-heritage-local-life-experience",
+        "/rajasthan-wildlife-photography-tour",
+        "/7-day-yoga-wellness-retreat-goa",
+        "/jodhpur-food-walking-tour",
+        "/15-day-beachfront-yoga-wellness-holiday-goa-india",
+        "/8-day-yoga-retreat-goa-india",
+        "/india-yoga-retreat-package-10-days"
+      ]
+    },
+    "blogPosts": {
+      "purpose": "blog articles",
+      "migrate": true,
+      "urls": [
+        "/yoga-holiday-in-goa",
+        "/best-yoga-retreats-in-goa-2026",
+        "/best-time-to-visit-goa-for-yoga-retreat",
+        "/the-ultimate-guide-to-golden-triangle-india-tours-explore-the-best-of-india-in-style",
+        "/top-5-opulent-hotels-in-jodhpur-for-a-regal-stay",
+        "/200-hour-yoga-teacher-training-in-goa-guide",
+        "/yoga-holiday-india-goa",
+        "/10-fascinating-facts-about-goa-indias-tropical-paradise",
+        "/luxury-yoga-retreats-goa",
+        "/best-ayurvedic-wellness-retreat-goa"
+      ]
+    },
+    "destinationTaxonomy": {
+      "purpose": "CMS destination taxonomy pages (/destination/*) — likely thin archive pages",
+      "migrate": "review",
+      "urls": [
+        "/destination/agra",
+        "/destination/amritsar",
+        "/destination/bharatpur",
+        "/destination/bikaner",
+        "/destination/chandigarh",
+        "/destination/delhi",
+        "/destination/doodhpathri",
+        "/destination/goa",
+        "/destination/gulmarg",
+        "/destination/haridwar",
+        "/destination/himachal-pradesh",
+        "/destination/jaipur",
+        "/destination/jaisalmer",
+        "/destination/jaispa",
+        "/destination/jawai",
+        "/destination/jodhpur",
+        "/destination/kashmir",
+        "/destination/khajuraho",
+        "/destination/khivhan",
+        "/destination/leh",
+        "/destination/manali",
+        "/destination/nubra-valley",
+        "/destination/pahalgam",
+        "/destination/pangong-lake",
+        "/destination/pushkar",
+        "/destination/ranthambore",
+        "/destination/ranthombore",
+        "/destination/rishikesh",
+        "/destination/sarchu",
+        "/destination/sariska",
+        "/destination/sonamarg",
+        "/destination/srinagar",
+        "/destination/tal-chhapar",
+        "/destination/udaipur",
+        "/destination/varanasi",
+        "/destination/yusmarg"
+      ]
+    },
+    "activityTaxonomy": {
+      "purpose": "CMS activity taxonomy pages (/activity/*) — overlap with detail pages",
+      "migrate": "review",
+      "urls": [
+        "/activity/cycle-tour",
+        "/activity/desert-evening-tour",
+        "/activity/food-walking-tour",
+        "/activity/sightseeing-tour",
+        "/activity/walking-tour"
+      ]
+    },
+    "junk": {
+      "purpose": "archives/author/category/testimonial endpoints — NOT migrated (Yoast-generated)",
+      "migrate": false,
+      "urls": [
+        "/category/blog",
+        "/author/saragamhospitaludaipur",
+        "/author/indiauncharted",
+        "/testimonial/176",
+        "/testimonial/177"
+      ]
+    }
+  }
+}

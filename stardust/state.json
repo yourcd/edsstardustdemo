@@ -4,23 +4,1236 @@
     "originUrl": "https://indiauncharted.com/",
     "extractedAt": "2026-09-15T11:49:30.209Z",
     "pageCap": 1,
-    "totalDiscovered": 1,
+    "totalDiscovered": 131,
     "crawled": 1,
-    "mode": "uplift"
+    "mode": "uplift",
+    "migratableCount": 126,
+    "crawledAt": "2026-09-16"
   },
   "pages": [
     {
       "slug": "index",
       "url": "https://indiauncharted.com/",
-      "status": "prototyped",
+      "bucket": "coreNav",
+      "status": "migrated",
       "currentStatePath": "stardust/current/pages/index.json",
       "prototypePath": "stardust/prototypes/index-A-proposed.html",
-      "variants": {
-        "A": "stardust/prototypes/index-A-proposed.html",
-        "B": "stardust/prototypes/index-B-proposed.html",
-        "C": "stardust/prototypes/index-C-proposed.html",
-        "C-cinematic": "stardust/prototypes/index-C-cinematic.html"
-      },
+      "migratedPath": "content/index.plain.html",
+      "template": "home",
+      "archetype": true
+    },
+    {
+      "slug": "about-us",
+      "url": "https://indiauncharted.com/about-us/",
+      "bucket": "coreNav",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/about-us.plain.html",
+      "template": "content-simple",
+      "archetype": true
+    },
+    {
+      "slug": "destinations",
+      "url": "https://indiauncharted.com/destinations/",
+      "bucket": "coreNav",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/destinations.plain.html",
+      "template": "listing",
+      "archetype": true
+    },
+    {
+      "slug": "activity",
+      "url": "https://indiauncharted.com/activity/",
+      "bucket": "coreNav",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "transfers",
+      "url": "https://indiauncharted.com/transfers/",
+      "bucket": "coreNav",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "content-simple"
+    },
+    {
+      "slug": "blogs",
+      "url": "https://indiauncharted.com/blogs/",
+      "bucket": "coreNav",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "listing"
+    },
+    {
+      "slug": "contact-us",
+      "url": "https://indiauncharted.com/contact-us/",
+      "bucket": "coreNav",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/contact-us.plain.html",
+      "template": "contact",
+      "archetype": true
+    },
+    {
+      "slug": "agra-tour-packages",
+      "url": "https://indiauncharted.com/agra-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/agra-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "delhi-tour-packages",
+      "url": "https://indiauncharted.com/delhi-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/delhi-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "amritsar-tour-packages",
+      "url": "https://indiauncharted.com/amritsar-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/amritsar-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "bharatpur-tour-packages",
+      "url": "https://indiauncharted.com/bharatpur-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/bharatpur-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "bikaner-tour-packages",
+      "url": "https://indiauncharted.com/bikaner-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/bikaner-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "gulmarg-tour-packages",
+      "url": "https://indiauncharted.com/gulmarg-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/gulmarg-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "haridwar-tour-packages",
+      "url": "https://indiauncharted.com/haridwar-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/haridwar-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "himachal-pradesh-tour-packages",
+      "url": "https://indiauncharted.com/himachal-pradesh-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/himachal-pradesh-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "jaisalmer-tour-packages",
+      "url": "https://indiauncharted.com/jaisalmer-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/jaisalmer-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "jawai-tour-packages",
+      "url": "https://indiauncharted.com/jawai-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/jawai-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "jodhpur-tour-packages",
+      "url": "https://indiauncharted.com/jodhpur-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/jodhpur-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "kashmir-tour-packages",
+      "url": "https://indiauncharted.com/kashmir-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/kashmir-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "khajuraho-tour-packages",
+      "url": "https://indiauncharted.com/khajuraho-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/khajuraho-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "leh-tour-packages",
+      "url": "https://indiauncharted.com/leh-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/leh-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "manali-tour-packages",
+      "url": "https://indiauncharted.com/manali-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/manali-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "pushkar-tour-packages",
+      "url": "https://indiauncharted.com/pushkar-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/pushkar-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "rishikesh-tour-packages",
+      "url": "https://indiauncharted.com/rishikesh-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/rishikesh-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "ranthambore-tour-packages",
+      "url": "https://indiauncharted.com/ranthambore-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/ranthambore-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "udaipur-tour-packages",
+      "url": "https://indiauncharted.com/udaipur-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/udaipur-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "varanasi-tour-packages",
+      "url": "https://indiauncharted.com/varanasi-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/varanasi-tour-packages.plain.html",
+      "template": "destination-hub"
+    },
+    {
+      "slug": "goa-tour-packages",
+      "url": "https://indiauncharted.com/goa-tour-packages/",
+      "bucket": "destinationHubs",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/goa-tour-packages.plain.html",
+      "template": "destination-hub",
+      "archetype": true
+    },
+    {
+      "slug": "educational-group-package-rajasthan-7-days-6-nights",
+      "url": "https://indiauncharted.com/educational-group-package-rajasthan-7-days-6-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/educational-group-package-rajasthan-7-days-6-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "200-hour-yoga-teacher-training-course-ttc-in-rishikesh",
+      "url": "https://indiauncharted.com/200-hour-yoga-teacher-training-course-ttc-in-rishikesh/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/200-hour-yoga-teacher-training-course-ttc-in-rishikesh.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "300-hour-yoga-teacher-training-course-ttc-in-rishikesh",
+      "url": "https://indiauncharted.com/300-hour-yoga-teacher-training-course-ttc-in-rishikesh/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/300-hour-yoga-teacher-training-course-ttc-in-rishikesh.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "goa-yoga-retreat-package-3-days-2-nights",
+      "url": "https://indiauncharted.com/goa-yoga-retreat-package-3-days-2-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/goa-yoga-retreat-package-3-days-2-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "golden-triangle-tour-with-khajuraho-varanasi-10-days-9-nights",
+      "url": "https://indiauncharted.com/golden-triangle-tour-with-khajuraho-varanasi-10-days-9-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/golden-triangle-tour-with-khajuraho-varanasi-10-days-9-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "golden-triangle-wildlife-tour-8-days-7-nights",
+      "url": "https://indiauncharted.com/golden-triangle-wildlife-tour-8-days-7-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/golden-triangle-wildlife-tour-8-days-7-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "himachal-pradesh-adventure-tour-with-paragliding-course-8-days-7-nights",
+      "url": "https://indiauncharted.com/himachal-pradesh-adventure-tour-with-paragliding-course-8-days-7-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/himachal-pradesh-adventure-tour-with-paragliding-course-8-days-7-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "incredible-india-group-tour-12-days-11-nights",
+      "url": "https://indiauncharted.com/incredible-india-group-tour-12-days-11-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/incredible-india-group-tour-12-days-11-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "jaisalmer-jodhpur-student-group-tour-package-5-days-4-nights",
+      "url": "https://indiauncharted.com/jaisalmer-jodhpur-student-group-tour-package-5-days-4-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/jaisalmer-jodhpur-student-group-tour-package-5-days-4-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "kashmir-honeymoon-tour-package-6-days-5-nights",
+      "url": "https://indiauncharted.com/kashmir-honeymoon-tour-package-6-days-5-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/kashmir-honeymoon-tour-package-6-days-5-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "kashmir-honeymoon-tour-package-7-days-6-nights",
+      "url": "https://indiauncharted.com/kashmir-honeymoon-tour-package-7-days-6-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/kashmir-honeymoon-tour-package-7-days-6-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "kashmir-nature-relaxation-family-tour-8-days-7-nights",
+      "url": "https://indiauncharted.com/kashmir-nature-relaxation-family-tour-8-days-7-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/kashmir-nature-relaxation-family-tour-8-days-7-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "kashmir-paradise-tour-package-5-days-4-nights",
+      "url": "https://indiauncharted.com/kashmir-paradise-tour-package-5-days-4-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/kashmir-paradise-tour-package-5-days-4-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "long-term-paragliding-certification-course-in-himachal-pradesh",
+      "url": "https://indiauncharted.com/long-term-paragliding-certification-course-in-himachal-pradesh/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/long-term-paragliding-certification-course-in-himachal-pradesh.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "luxury-motorcycle-expedition-india-14-days-13-nights",
+      "url": "https://indiauncharted.com/luxury-motorcycle-expedition-india-14-days-13-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/luxury-motorcycle-expedition-india-14-days-13-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "rajasthan-motorcycle-tour-12-days-11-nights",
+      "url": "https://indiauncharted.com/rajasthan-motorcycle-tour-12-days-11-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/rajasthan-motorcycle-tour-12-days-11-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "rajasthan-bird-photography-tour-package-7-days-6-nights",
+      "url": "https://indiauncharted.com/rajasthan-bird-photography-tour-package-7-days-6-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/rajasthan-bird-photography-tour-package-7-days-6-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "rajasthan-wildlife-tour-package-6-days-5-nights",
+      "url": "https://indiauncharted.com/rajasthan-wildlife-tour-package-6-days-5-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/rajasthan-wildlife-tour-package-6-days-5-nights.plain.html",
+      "template": "tour-detail",
+      "archetype": true
+    },
+    {
+      "slug": "rishikesh-yoga-spiritual-retreat-3-days-2-nights",
+      "url": "https://indiauncharted.com/rishikesh-yoga-spiritual-retreat-3-days-2-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/rishikesh-yoga-spiritual-retreat-3-days-2-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "rishikesh-yoga-teacher-training-tour-28-days-27-nights",
+      "url": "https://indiauncharted.com/rishikesh-yoga-teacher-training-tour-28-days-27-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/rishikesh-yoga-teacher-training-tour-28-days-27-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "royal-enfield-adventure-tour-ultimate-india-motorcycle-expedition-12-days-11-nights",
+      "url": "https://indiauncharted.com/royal-enfield-adventure-tour-ultimate-india-motorcycle-expedition-12-days-11-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/royal-enfield-adventure-tour-ultimate-india-motorcycle-expedition-12-days-11-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "spiritual-india-tour-package-12-days-11-nights",
+      "url": "https://indiauncharted.com/spiritual-india-tour-package-12-days-11-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/spiritual-india-tour-package-12-days-11-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "udaipur-romantic-honeymoon-package-4-days-3-nights",
+      "url": "https://indiauncharted.com/udaipur-romantic-honeymoon-package-4-days-3-nights/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/udaipur-romantic-honeymoon-package-4-days-3-nights.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "ultimate-india-experience-golden-triangle-rajasthan-taj-mahal-varanasi",
+      "url": "https://indiauncharted.com/ultimate-india-experience-golden-triangle-rajasthan-taj-mahal-varanasi/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/ultimate-india-experience-golden-triangle-rajasthan-taj-mahal-varanasi.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "pushkar-walking-tour-spiritual-cultural-heritage-experience",
+      "url": "https://indiauncharted.com/pushkar-walking-tour-spiritual-cultural-heritage-experience/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/pushkar-walking-tour-spiritual-cultural-heritage-experience.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "walking-tour",
+      "url": "https://indiauncharted.com/walking-tour/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/walking-tour.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "sightseeing-tour",
+      "url": "https://indiauncharted.com/sightseeing-tour/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/sightseeing-tour.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "cycle-tour",
+      "url": "https://indiauncharted.com/cycle-tour/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/cycle-tour.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "food-walking-tour",
+      "url": "https://indiauncharted.com/food-walking-tour/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/food-walking-tour.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "desert-evening-tour",
+      "url": "https://indiauncharted.com/desert-evening-tour/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/desert-evening-tour.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "udaipur-food-walking-tour-taste-the-flavors-of-the-city-of-lakes",
+      "url": "https://indiauncharted.com/udaipur-food-walking-tour-taste-the-flavors-of-the-city-of-lakes/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/udaipur-food-walking-tour-taste-the-flavors-of-the-city-of-lakes.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "2-nights-3-days-golden-city-jaisalmer-tour-package",
+      "url": "https://indiauncharted.com/2-nights-3-days-golden-city-jaisalmer-tour-package/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/2-nights-3-days-golden-city-jaisalmer-tour-package.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "delhi-heritage-walking-tour-explore-the-soul-of-old-delhi",
+      "url": "https://indiauncharted.com/delhi-heritage-walking-tour-explore-the-soul-of-old-delhi/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/delhi-heritage-walking-tour-explore-the-soul-of-old-delhi.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "udaipur-heritage-walking-tour-explore-the-city-of-lakes",
+      "url": "https://indiauncharted.com/udaipur-heritage-walking-tour-explore-the-city-of-lakes/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/udaipur-heritage-walking-tour-explore-the-city-of-lakes.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "agra-walking-tour-heritage-markets-mughal-culture-experience",
+      "url": "https://indiauncharted.com/agra-walking-tour-heritage-markets-mughal-culture-experience/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/agra-walking-tour-heritage-markets-mughal-culture-experience.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "jaipur-food-walking-tour-taste-the-flavors-of-the-pink-city",
+      "url": "https://indiauncharted.com/jaipur-food-walking-tour-taste-the-flavors-of-the-pink-city/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/jaipur-food-walking-tour-taste-the-flavors-of-the-pink-city.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "jaisalmer-desert-evening-tour-camel-safari-folk-dance-dinner-return",
+      "url": "https://indiauncharted.com/jaisalmer-desert-evening-tour-camel-safari-folk-dance-dinner-return/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/jaisalmer-desert-evening-tour-camel-safari-folk-dance-dinner-return.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "jaisalmer-walking-tour-explore-the-golden-city-on-foot",
+      "url": "https://indiauncharted.com/jaisalmer-walking-tour-explore-the-golden-city-on-foot/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/jaisalmer-walking-tour-explore-the-golden-city-on-foot.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "highlights-of-jodhpur-guided-full-day-city-sightseeing-tour",
+      "url": "https://indiauncharted.com/highlights-of-jodhpur-guided-full-day-city-sightseeing-tour/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/highlights-of-jodhpur-guided-full-day-city-sightseeing-tour.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "highlights-of-jaisalmer-guided-full-day-city-sightseeing-tour",
+      "url": "https://indiauncharted.com/highlights-of-jaisalmer-guided-full-day-city-sightseeing-tour/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/highlights-of-jaisalmer-guided-full-day-city-sightseeing-tour.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "jaipur-cycle-tour-morning-heritage-local-life-experience",
+      "url": "https://indiauncharted.com/jaipur-cycle-tour-morning-heritage-local-life-experience/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/jaipur-cycle-tour-morning-heritage-local-life-experience.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "rajasthan-wildlife-photography-tour",
+      "url": "https://indiauncharted.com/rajasthan-wildlife-photography-tour/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/rajasthan-wildlife-photography-tour.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "7-day-yoga-wellness-retreat-goa",
+      "url": "https://indiauncharted.com/7-day-yoga-wellness-retreat-goa/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/7-day-yoga-wellness-retreat-goa.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "jodhpur-food-walking-tour",
+      "url": "https://indiauncharted.com/jodhpur-food-walking-tour/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/jodhpur-food-walking-tour.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "15-day-beachfront-yoga-wellness-holiday-goa-india",
+      "url": "https://indiauncharted.com/15-day-beachfront-yoga-wellness-holiday-goa-india/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/15-day-beachfront-yoga-wellness-holiday-goa-india.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "8-day-yoga-retreat-goa-india",
+      "url": "https://indiauncharted.com/8-day-yoga-retreat-goa-india/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/8-day-yoga-retreat-goa-india.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "india-yoga-retreat-package-10-days",
+      "url": "https://indiauncharted.com/india-yoga-retreat-package-10-days/",
+      "bucket": "itineraryDetail",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/india-yoga-retreat-package-10-days.plain.html",
+      "template": "tour-detail"
+    },
+    {
+      "slug": "yoga-holiday-in-goa",
+      "url": "https://indiauncharted.com/yoga-holiday-in-goa/",
+      "bucket": "blogPosts",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "blog-post"
+    },
+    {
+      "slug": "best-yoga-retreats-in-goa-2026",
+      "url": "https://indiauncharted.com/best-yoga-retreats-in-goa-2026/",
+      "bucket": "blogPosts",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "blog-post"
+    },
+    {
+      "slug": "best-time-to-visit-goa-for-yoga-retreat",
+      "url": "https://indiauncharted.com/best-time-to-visit-goa-for-yoga-retreat/",
+      "bucket": "blogPosts",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "blog-post"
+    },
+    {
+      "slug": "the-ultimate-guide-to-golden-triangle-india-tours-explore-the-best-of-india-in-style",
+      "url": "https://indiauncharted.com/the-ultimate-guide-to-golden-triangle-india-tours-explore-the-best-of-india-in-style/",
+      "bucket": "blogPosts",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "blog-post"
+    },
+    {
+      "slug": "top-5-opulent-hotels-in-jodhpur-for-a-regal-stay",
+      "url": "https://indiauncharted.com/top-5-opulent-hotels-in-jodhpur-for-a-regal-stay/",
+      "bucket": "blogPosts",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "blog-post"
+    },
+    {
+      "slug": "200-hour-yoga-teacher-training-in-goa-guide",
+      "url": "https://indiauncharted.com/200-hour-yoga-teacher-training-in-goa-guide/",
+      "bucket": "blogPosts",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "blog-post"
+    },
+    {
+      "slug": "yoga-holiday-india-goa",
+      "url": "https://indiauncharted.com/yoga-holiday-india-goa/",
+      "bucket": "blogPosts",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "blog-post"
+    },
+    {
+      "slug": "10-fascinating-facts-about-goa-indias-tropical-paradise",
+      "url": "https://indiauncharted.com/10-fascinating-facts-about-goa-indias-tropical-paradise/",
+      "bucket": "blogPosts",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "blog-post"
+    },
+    {
+      "slug": "luxury-yoga-retreats-goa",
+      "url": "https://indiauncharted.com/luxury-yoga-retreats-goa/",
+      "bucket": "blogPosts",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "",
+      "template": "blog-post"
+    },
+    {
+      "slug": "best-ayurvedic-wellness-retreat-goa",
+      "url": "https://indiauncharted.com/best-ayurvedic-wellness-retreat-goa/",
+      "bucket": "blogPosts",
+      "status": "migrated",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": "content/best-ayurvedic-wellness-retreat-goa.plain.html",
+      "template": "blog-post",
+      "archetype": true
+    },
+    {
+      "slug": "destination-agra",
+      "url": "https://indiauncharted.com/destination/agra/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-amritsar",
+      "url": "https://indiauncharted.com/destination/amritsar/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-bharatpur",
+      "url": "https://indiauncharted.com/destination/bharatpur/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-bikaner",
+      "url": "https://indiauncharted.com/destination/bikaner/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-chandigarh",
+      "url": "https://indiauncharted.com/destination/chandigarh/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-delhi",
+      "url": "https://indiauncharted.com/destination/delhi/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-doodhpathri",
+      "url": "https://indiauncharted.com/destination/doodhpathri/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-goa",
+      "url": "https://indiauncharted.com/destination/goa/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-gulmarg",
+      "url": "https://indiauncharted.com/destination/gulmarg/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-haridwar",
+      "url": "https://indiauncharted.com/destination/haridwar/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-himachal-pradesh",
+      "url": "https://indiauncharted.com/destination/himachal-pradesh/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-jaipur",
+      "url": "https://indiauncharted.com/destination/jaipur/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-jaisalmer",
+      "url": "https://indiauncharted.com/destination/jaisalmer/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-jaispa",
+      "url": "https://indiauncharted.com/destination/jaispa/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-jawai",
+      "url": "https://indiauncharted.com/destination/jawai/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-jodhpur",
+      "url": "https://indiauncharted.com/destination/jodhpur/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-kashmir",
+      "url": "https://indiauncharted.com/destination/kashmir/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-khajuraho",
+      "url": "https://indiauncharted.com/destination/khajuraho/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-khivhan",
+      "url": "https://indiauncharted.com/destination/khivhan/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-leh",
+      "url": "https://indiauncharted.com/destination/leh/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-manali",
+      "url": "https://indiauncharted.com/destination/manali/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-nubra-valley",
+      "url": "https://indiauncharted.com/destination/nubra-valley/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-pahalgam",
+      "url": "https://indiauncharted.com/destination/pahalgam/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-pangong-lake",
+      "url": "https://indiauncharted.com/destination/pangong-lake/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-pushkar",
+      "url": "https://indiauncharted.com/destination/pushkar/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-ranthambore",
+      "url": "https://indiauncharted.com/destination/ranthambore/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-ranthombore",
+      "url": "https://indiauncharted.com/destination/ranthombore/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-rishikesh",
+      "url": "https://indiauncharted.com/destination/rishikesh/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-sarchu",
+      "url": "https://indiauncharted.com/destination/sarchu/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-sariska",
+      "url": "https://indiauncharted.com/destination/sariska/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-sonamarg",
+      "url": "https://indiauncharted.com/destination/sonamarg/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-srinagar",
+      "url": "https://indiauncharted.com/destination/srinagar/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-tal-chhapar",
+      "url": "https://indiauncharted.com/destination/tal-chhapar/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-udaipur",
+      "url": "https://indiauncharted.com/destination/udaipur/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-varanasi",
+      "url": "https://indiauncharted.com/destination/varanasi/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "destination-yusmarg",
+      "url": "https://indiauncharted.com/destination/yusmarg/",
+      "bucket": "destinationTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "activity-cycle-tour",
+      "url": "https://indiauncharted.com/activity/cycle-tour/",
+      "bucket": "activityTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "activity-desert-evening-tour",
+      "url": "https://indiauncharted.com/activity/desert-evening-tour/",
+      "bucket": "activityTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "activity-food-walking-tour",
+      "url": "https://indiauncharted.com/activity/food-walking-tour/",
+      "bucket": "activityTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "activity-sightseeing-tour",
+      "url": "https://indiauncharted.com/activity/sightseeing-tour/",
+      "bucket": "activityTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
+      "migratedPath": ""
+    },
+    {
+      "slug": "activity-walking-tour",
+      "url": "https://indiauncharted.com/activity/walking-tour/",
+      "bucket": "activityTaxonomy",
+      "status": "discovered",
+      "currentStatePath": "",
+      "prototypePath": "",
       "migratedPath": ""
     }
   ]
